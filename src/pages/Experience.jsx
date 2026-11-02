@@ -63,12 +63,7 @@ export default function Experience() {
               </li>
             ))}
           </ul>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '16px', marginTop: '40px' }}>
-            <img src={asset('/img/party-1.webp')} alt="A DJ smiling behind the decks at a GlobalLYNK night" loading="lazy" style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover', borderRadius: radius.md }} />
-            <img src={asset('/img/fireside.webp')} alt="A speaker addressing an audience during an NFNTE Capital talk" loading="lazy" style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover', borderRadius: radius.md }} />
-            <img src={asset('/img/party-2.webp')} alt="A DJ mixing on a controller at a GlobalLYNK night" loading="lazy" style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover', borderRadius: radius.md }} />
-          </div>
-          <p style={{ ...small, marginTop: '16px' }}>Planned program. Sessions and details are confirmed as the schedule is finalized. Photos from previous programming.</p>
+          <p style={{ ...small, marginTop: '16px' }}>Planned program. Sessions and details are confirmed as the schedule is finalized.</p>
         </div>
       </section>
 
@@ -114,39 +109,51 @@ export default function Experience() {
 }
 
 function Hero() {
+  // Deck-cover treatment: the logo on solid burgundy, nothing behind it.
+  // Photos sit in their own strip underneath so neither gets cropped or crowded.
+  const photos = [
+    ['/img/workshop.webp', 'Two people working on DJ decks together at a hands-on workshop', 'center 40%'],
+    ['/img/party-1.webp', 'A DJ smiling behind the decks', 'center 30%'],
+    ['/img/fireside.webp', 'A speaker addressing an audience during a talk', 'center 40%'],
+    ['/img/party-2.webp', 'A DJ mixing on a controller', 'center 30%'],
+  ];
   return (
-    <section style={{ position: 'relative', background: color.bgDeep, marginTop: '-72px', paddingTop: '72px', overflow: 'hidden' }}>
-      {/* photo: full-bleed on phones, right half on desktop */}
-      <div aria-hidden="true" style={{ position: 'absolute', inset: 0 }}>
-        <img src={asset('/img/workshop.webp')} alt="" fetchpriority="high"
-          style={{ position: 'absolute', right: 0, top: 0, height: '100%', width: 'min(100%, 760px)', objectFit: 'cover', objectPosition: 'center 35%' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, #1A0308 0%, #1A0308 34%, rgba(26,3,8,0.78) 58%, rgba(26,3,8,0.25) 100%), linear-gradient(0deg, #1A0308 0%, rgba(26,3,8,0) 40%)' }} />
-      </div>
-
-      <div style={{ ...container, position: 'relative', minHeight: 'min(92vh, 860px)', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 'clamp(40px, 8vw, 96px) clamp(16px, 4vw, 40px)' }}>
-        <p className="ml-rise" style={{ ...eyebrow, marginBottom: '20px' }}>{event.context}</p>
-        <Logo height={150} style={{ height: 'clamp(110px, 18vw, 190px)', marginBottom: '28px', marginLeft: '-6px' }} />
-        <h1 className="ml-rise ml-rise-2" style={{ ...h1, maxWidth: '760px' }}>
-          Step inside<br /><span style={{ color: color.coral }}>the art of DJing.</span>
-        </h1>
-        <p className="ml-rise ml-rise-3" style={{ fontFamily: font.display, fontWeight: 700, textTransform: 'uppercase', fontSize: 'clamp(22px, 2.6vw, 30px)', letterSpacing: '0.03em', color: color.cream, margin: '28px 0 0', lineHeight: 1.15 }}>
-          {event.dateLabel}<br />
-          <span style={{ color: color.creamSoft }}>{event.venue.name} · {event.venue.neighborhood}</span>
-        </p>
-        <div className="ml-rise ml-rise-3" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '32px' }}>
-          <RegisterButton />
-          <Link to="/#expect" className="ml-btn ml-ghost" style={buttonGhost}>What to expect</Link>
-        </div>
-        <div style={{ marginTop: 'clamp(40px, 6vw, 64px)' }}>
-          <p style={{ ...small, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '14px', color: color.creamSoft }}>Presented by</p>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(20px, 4vw, 36px)', flexWrap: 'wrap' }}>
+    <>
+      <section style={{ background: color.bgDeep, marginTop: '-72px', paddingTop: '72px' }}>
+        <div style={{ ...container, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: 'clamp(40px, 7vw, 88px)', paddingBottom: 'clamp(48px, 7vw, 80px)' }}>
+          <p className="ml-rise" style={{ ...eyebrow, marginBottom: 'clamp(20px, 3vw, 32px)' }}>{event.context}</p>
+          <Logo height={360} style={{ height: 'clamp(170px, 34vw, 360px)', maxWidth: '100%' }} />
+          <h1 className="ml-rise ml-rise-2" style={{ ...h1, fontSize: 'clamp(40px, 6.4vw, 84px)', marginTop: 'clamp(24px, 4vw, 40px)' }}>
+            Step inside <span style={{ color: color.coral }}>the art of DJing.</span>
+          </h1>
+          <p className="ml-rise ml-rise-2" style={{ fontFamily: font.display, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: color.creamSoft, fontSize: 'clamp(17px, 2vw, 22px)', margin: '14px 0 0' }}>
+            {event.tagline}
+          </p>
+          <p className="ml-rise ml-rise-3" style={{ fontFamily: font.display, fontWeight: 700, textTransform: 'uppercase', fontSize: 'clamp(22px, 2.6vw, 30px)', letterSpacing: '0.03em', color: color.cream, margin: '28px 0 0', lineHeight: 1.15 }}>
+            {event.dateLabel}<br />
+            <span style={{ color: color.coral }}>{event.venue.name} · {event.venue.neighborhood}</span>
+          </p>
+          <div className="ml-rise ml-rise-3" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '12px', marginTop: '32px' }}>
+            <RegisterButton />
+            <Link to="/#expect" className="ml-btn ml-ghost" style={buttonGhost}>What to expect</Link>
+          </div>
+          <p style={{ ...small, letterSpacing: '0.1em', textTransform: 'uppercase', margin: 'clamp(40px, 6vw, 56px) 0 14px', color: color.creamSoft }}>Presented by</p>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'clamp(24px, 5vw, 44px)', flexWrap: 'wrap' }}>
             {sponsors.presenters.map((p) => (
               <img key={p.name} src={asset(p.logo)} alt={p.name} style={{ height: p.name === 'AmpSpot' ? '26px' : '48px', width: 'auto' }} />
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Photo strip — whole images, nothing layered on top */}
+      <div className="ml-photostrip" style={{ background: color.bgDeep }}>
+        {photos.map(([src, alt, pos], i) => (
+          <img key={src} src={asset(src)} alt={alt} fetchpriority={i === 0 ? 'high' : undefined}
+            style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover', objectPosition: pos }} />
+        ))}
       </div>
-    </section>
+    </>
   );
 }
 

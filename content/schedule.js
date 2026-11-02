@@ -6,6 +6,8 @@
 //        scheduling" label on every page. Switch to 'confirmed' once final.
 // Blocks or sessions with status 'draft' stay private.
 // `talent` uses names exactly as written in talent.js.
+// `partnerCategory` puts that category's Community Partner logos on the session
+// in the guide (Featured big, Standard smaller). Leave it off for no logos.
 // ──────────────────────────────────────────────────────────────────────────
 
 export default {
@@ -21,9 +23,9 @@ export default {
       sessions: [
         { status: 'published', title: 'Intro to DJ workshops', detail: 'Hands-on and beginner-friendly. No previous DJ experience required.', area: null, time: null, talent: [] },
         { status: 'published', title: 'Art activation', detail: 'A live art activation from A Fly Guy.', area: null, time: null, talent: ['A Fly Guy'] },
-        { status: 'published', title: 'Fireside chat: Mental Health & Creative Wellbeing', detail: 'An honest conversation about sustaining a creative life.', area: null, time: null, talent: [] },
-        { status: 'published', title: 'Fireside chat: AI & Creative Technology', detail: 'New tools and where creativity goes next.', area: null, time: null, talent: [] },
-        { status: 'published', title: 'Fireside chat: Finance & Business Growth', detail: 'Building a business around your craft.', area: null, time: null, talent: [] },
+        { status: 'published', title: 'Fireside chat: Mental Health & Creative Wellbeing', detail: 'An honest conversation about sustaining a creative life.', area: null, time: null, talent: [], partnerCategory: 'health_wellness' },
+        { status: 'published', title: 'Fireside chat: AI & Creative Technology', detail: 'New tools and where creativity goes next.', area: null, time: null, talent: [], partnerCategory: 'ai_tech_creative' },
+        { status: 'published', title: 'Fireside chat: Finance & Business Growth', detail: 'Building a business around your craft.', area: null, time: null, talent: [], partnerCategory: 'business_financial' },
       ],
     },
     {
@@ -33,7 +35,7 @@ export default {
       area: null,
       summary: 'A social equity conversation, networking, light bites, drinks and a DJ set.',
       sessions: [
-        { status: 'published', title: 'Social equity conversation', detail: 'Hosted by NFNTE Capital.', area: null, time: null, talent: [] },
+        { status: 'published', title: 'Social equity conversation', detail: 'Hosted by NFNTE Capital.', area: null, time: null, talent: [], partnerCategory: 'community_social' },
       ],
     },
     {

@@ -53,16 +53,11 @@ export default {
   categories: CATEGORIES,
   packages: PACKAGES,
   listings: [
-    // Example shape — keep as 'draft' (or delete) until a real partner is published.
-    {
-      status: 'draft',
-      name: 'Example Wellness Studio',
-      category: 'health_wellness',
-      placement: 'featured',
-      logo: null, // '/img/partners/example.png'
-      description: 'Short description supplied in listing materials.',
-      link: 'https://example.com',
-      offer: null, // e.g. '15% off a first class for Mix Lab guests'
-    },
+    // Examples so you can see the layout with `npm run dev:drafts`.
+    // They're drafts, so they never appear on the real site. Delete them once real partners are in.
+    { status: 'draft', name: 'Example Wellness Studio', category: 'health_wellness', placement: 'featured', logo: null, description: 'Short description supplied in listing materials.', link: 'https://example.com', offer: '15% off a first class for Mix Lab guests' },
+    { status: 'draft', name: 'Example Therapy Collective', category: 'health_wellness', placement: 'standard', logo: null, description: 'Short description supplied in listing materials.', link: 'https://example.com', offer: null },
+    { status: 'draft', name: 'Example Juice Bar', category: 'health_wellness', placement: 'standard', logo: null, description: 'Short description supplied in listing materials.', link: 'https://example.com', offer: null },
+    { status: 'draft', name: 'Example AI Studio', category: 'ai_tech_creative', placement: 'standard', logo: null, description: 'Short description supplied in listing materials.', link: 'https://example.com', offer: null },
   ],
 };

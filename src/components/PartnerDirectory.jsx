@@ -65,3 +65,50 @@ function Listing({ l }) {
     </article>
   );
 }
+
+// Logos for one category, shown on its matching experience in the guide.
+// Featured logos are big; Standard logos are smaller. Featured always come first.
+export function PartnerLogos({ category }) {
+  if (!category) return null;
+  const items = partners.listings.filter((l) => l.category === category);
+  if (!items.length) return null;
+  const featured = items.filter((l) => l.placement === 'featured');
+  const standard = items.filter((l) => l.placement !== 'featured');
+  const label = partners.categories.find((c) => c.key === category)?.label;
+  return (
+    <div style={{ marginTop: '12px' }}>
+      <p style={{ ...small, fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '8px' }}>
+        {label} partners
+      </p>
+      {featured.length > 0 && (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: standard.length ? '10px' : 0 }}>
+          {featured.map((l) => <LogoTile key={l.name} l={l} size="featured" />)}
+        </div>
+      )}
+      {standard.length > 0 && (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+          {standard.map((l) => <LogoTile key={l.name} l={l} size="standard" />)}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function LogoTile({ l, size }) {
+  const big = size === 'featured';
+  const box = {
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    width: big ? '220px' : '132px', maxWidth: '100%', height: big ? '96px' : '56px',
+    background: '#FFFFFF', borderRadius: radius.sm, padding: big ? '12px 16px' : '8px 10px',
+    textDecoration: 'none', position: 'relative',
+  };
+  const inner = l.logo
+    ? <img src={asset(l.logo)} alt={`${l.name} logo`} loading="lazy" style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+    : <span style={{ fontFamily: font.display, fontWeight: 700, textTransform: 'uppercase', color: '#1A0308', fontSize: big ? '20px' : '14px', lineHeight: 1, textAlign: 'center' }}>{l.name}</span>;
+  const draftDot = l.status && l.status !== 'published'
+    ? <span style={{ position: 'absolute', top: 4, left: 6, fontSize: '9px', fontWeight: 700, color: '#B3001B' }}>DRAFT</span>
+    : null;
+  return l.link
+    ? <a href={l.link} target="_blank" rel="noopener noreferrer" aria-label={`${l.name}${big ? ' (featured partner)' : ''}`} style={box}>{draftDot}{inner}</a>
+    : <div style={box}>{draftDot}{inner}</div>;
+}

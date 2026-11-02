@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { DraftTag } from './DraftBanner';
+import { PartnerLogos } from './PartnerDirectory';
 import { talent, talentByName, schedule, scheduleIsProvisional, faq, asset } from '../lib/content';
 import { color, font, eyebrow, h2, h3, body, small, card, radius } from '../styles/tokens';
 
@@ -140,6 +141,7 @@ export function ScheduleList({ detailed = false }) {
 function SessionDetails({ s }) {
   const people = (s.talent || []).map((n) => talentByName[n]).filter(Boolean);
   return (
+    <div>
     <details style={{ ...card, background: 'rgba(255,242,219,0.04)' }}>
       <summary style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 14px', minHeight: '52px' }}>
         <div style={{ flex: 1 }}>
@@ -158,6 +160,8 @@ function SessionDetails({ s }) {
         )}
       </div>
     </details>
+    <PartnerLogos category={s.partnerCategory} />
+    </div>
   );
 }
 
