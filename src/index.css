@@ -1,0 +1,50 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: #21070C; color: #FFF2DB; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+button { font: inherit; }
+:focus-visible { outline: 3px solid #FF5B5D; outline-offset: 3px; border-radius: 4px; }
+::selection { background: #FF5B5D; color: #1A0308; }
+
+/* Hover polish — kept tiny */
+.ml-btn { transition: transform .18s ease, background-color .18s ease, color .18s ease; }
+.ml-btn:hover { transform: translateY(-1px); }
+.ml-ghost:hover { background: rgba(255,242,219,0.08) !important; }
+.ml-link { text-decoration: underline; text-decoration-color: rgba(255,91,93,0.7); text-underline-offset: 3px; }
+.ml-link:hover { color: #FF5B5D; }
+.ml-nav a.active { color: #FF5B5D; }
+
+/* Restrained entrance animation */
+@keyframes mlRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.ml-rise { animation: mlRise .8s cubic-bezier(.2,.7,.2,1) both; }
+.ml-rise-2 { animation-delay: .12s; }
+.ml-rise-3 { animation-delay: .24s; }
+
+/* Expandable details */
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+details .ml-chev { transition: transform .2s ease; }
+details[open] .ml-chev { transform: rotate(45deg); }
+
+/* Layout helpers that need media queries */
+.ml-split { display: grid; grid-template-columns: 1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+@media (min-width: 900px) { .ml-split { grid-template-columns: 1.05fr 1fr; } .ml-split.rev > :first-child { order: 2; } }
+
+.ml-desktop-only { display: none !important; }
+@media (min-width: 860px) { .ml-desktop-only { display: flex !important; } .ml-mobile-only { display: none !important; } }
+
+/* Room for the mobile sticky Register bar so it never covers content */
+@media (max-width: 859px) { body.has-sticky { padding-bottom: 84px; } }
+
+.ml-scroll-x { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.ml-scroll-x::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Label + content rows (What to expect, schedule): stacked on phones */
+.ml-row { display: grid; grid-template-columns: 1fr; gap: 6px; }
+@media (min-width: 700px) { .ml-row { grid-template-columns: minmax(120px, 0.38fr) 1fr; gap: clamp(16px, 4vw, 48px); } }
