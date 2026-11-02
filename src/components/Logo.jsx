@@ -8,7 +8,7 @@ export default function Logo({ height = 48, style }) {
     <img
       src={asset('/img/mix-lab-logo-white.png')}
       alt="The Mix Lab"
-      width={Math.round(height * 1.312)}
+      width={Math.round(height * 1.305)}
       height={height}
       style={{ height, width: 'auto', display: 'block', ...style }}
     />

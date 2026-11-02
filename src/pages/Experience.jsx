@@ -122,7 +122,7 @@ function Hero() {
       <section style={{ background: color.bgDeep, marginTop: '-72px', paddingTop: '72px' }}>
         <div style={{ ...container, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: 'clamp(40px, 7vw, 88px)', paddingBottom: 'clamp(48px, 7vw, 80px)' }}>
           <p className="ml-rise" style={{ ...eyebrow, marginBottom: 'clamp(20px, 3vw, 32px)' }}>{event.context}</p>
-          <Logo height={360} style={{ height: 'clamp(170px, 34vw, 360px)', maxWidth: '100%' }} />
+          <Logo height={300} style={{ height: 'clamp(160px, 30vw, 300px)', maxWidth: '100%' }} />
           <h1 className="ml-rise ml-rise-2" style={{ ...h1, fontSize: 'clamp(40px, 6.4vw, 84px)', marginTop: 'clamp(24px, 4vw, 40px)' }}>
             Step inside <span style={{ color: color.coral }}>the art of DJing.</span>
           </h1>
