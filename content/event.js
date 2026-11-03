@@ -51,7 +51,7 @@ export default {
 
   // Final public domain, e.g. 'https://themixlab.club'. Needed for the QR code
   // (npm run qr) and the social-sharing preview. Leave null until confirmed.
-  siteUrl: null,
+  siteUrl: 'https://www.themixlab.com',
 
   contactEmail: 'connect@indabooth.com',
   instagram: 'https://www.instagram.com/globallynk/',
