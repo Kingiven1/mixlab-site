@@ -18,10 +18,10 @@ export default [
   {
     status: 'published',
     q: 'How do I attend?',
-    a: 'Attendance is by invitation request. Every request is reviewed, and submitting one does not confirm attendance. You don’t need DJ experience to request an invitation.',
+    a: 'Request an invitation through our Luma page and choose the Daytime or Night session. Every request is reviewed, and submitting one does not confirm attendance. You’ll get an email once your request is approved. No DJ experience needed.',
   },
   {
-    status: 'published',
+    status: 'draft', // the updates form is hidden now that Luma is live
     q: 'Does “Get updates” request an invitation?',
     a: 'No. Getting updates only sends you news and announcements. It does not request an invitation, register you or reserve a place.',
   },

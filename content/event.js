@@ -40,7 +40,7 @@ export default {
   // every ticket type). Then every attendance button says "Request an
   // invitation" and goes to Luma. While null, buttons say "Get updates" and the
   // updates form is clearly labelled as NOT an invitation request.
-  registrationUrl: null,
+  registrationUrl: 'https://luma.com/2sd53ba8',
   registrationLabel: 'Request an invitation',
 
   // Flyer. Put the approved file in /public/img/ and set the path, e.g.

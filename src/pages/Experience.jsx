@@ -130,7 +130,8 @@ function Hero() {
             {event.tagline}
           </p>
           <p className="ml-rise ml-rise-3" style={{ fontFamily: font.display, fontWeight: 700, textTransform: 'uppercase', fontSize: 'clamp(22px, 2.6vw, 30px)', letterSpacing: '0.03em', color: color.cream, margin: '28px 0 0', lineHeight: 1.15 }}>
-            {event.dateLabel}{event.hoursLabel ? ` · ${event.hoursLabel}` : ''}<br />
+            {event.dateLabel}<br />
+            {event.hoursLabel && <>{event.hoursLabel}<br /></>}
             <span style={{ color: color.coral }}>{event.venue.name} · {event.venue.neighborhood}</span>
           </p>
           <div className="ml-rise ml-rise-3" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '12px', marginTop: '32px' }}>
@@ -208,7 +209,12 @@ function RegisterSection() {
         />
         <div style={{ maxWidth: '760px', margin: '0 auto' }}>
           {hasRegistration ? (
-            <div style={{ textAlign: 'center' }}><RegisterButton /></div>
+            <div style={{ textAlign: 'center' }}>
+              <RegisterButton />
+              <p style={{ ...body, marginTop: '18px', fontSize: '15px' }}>
+                Choose the Daytime or Night session when you request. Admission is complimentary.
+              </p>
+            </div>
           ) : (
             <div style={{ ...card, padding: 'clamp(20px, 4vw, 32px)' }}>
               <p style={{ ...eyebrow, marginBottom: '6px' }}>Get updates</p>
