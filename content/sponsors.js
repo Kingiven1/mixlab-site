@@ -14,7 +14,7 @@ export default {
   presenters: [
     { name: 'GlobalLYNK', logo: '/img/presenter-globallynk.png', role: 'Produces introductory DJ workshops, cohort classes and cultural exchange programs.', link: 'https://www.globallynk.club' },
     { name: 'AmpSpot', logo: '/img/presenter-ampspot.png', role: 'Technology connecting DJs and event organizers through discovery, booking and business tools.', link: null },
-    { name: 'NFNTE Capital', logo: '/img/presenter-nfnte.png', role: 'Hosts the Networking & Conversation session and its social equity conversation.', link: null },
+    { name: 'NFNTE Capital', logo: '/img/presenter-nfnte.png', role: 'Hosts the Social Hour and its social equity conversation.', link: null },
   ],
   hostVenue: { name: 'The LAB Miami', role: 'A Wynwood innovation community bringing founders, engineers and entrepreneurs into the experience.' },
 
@@ -49,7 +49,7 @@ export default {
 
   supportAreas: [
     { title: 'Program funding', copy: 'Instructors, artists, staffing and event delivery.' },
-    { title: 'Food & beverages', copy: 'Daytime bites, evening hospitality and drinks.' },
+    { title: 'Food & beverages', copy: 'Daytime bites, Social Hour hospitality and drinks.' },
     { title: 'Art exhibition', copy: 'Display walls, installation, lighting and transport.' },
     { title: 'Branding & operations', copy: 'Photo wall, banners, signage and documentation.' },
     { title: 'Creative wellbeing', copy: 'Support the mental health and wellbeing conversation.' },

@@ -34,7 +34,7 @@ export default function Guide() {
               <p style={{ fontFamily: font.display, fontWeight: 700, textTransform: 'uppercase', fontSize: '22px', color: color.cream, margin: '4px 0 0', lineHeight: 1.05 }}>
                 {event.dateLabel}
               </p>
-              <p style={{ ...small, marginTop: '2px' }}>{event.venue.name} · {event.venue.neighborhood} · Times in ET</p>
+              <p style={{ ...small, marginTop: '2px' }}>{event.hoursLabel ? `${event.hoursLabel} · ` : ''}{event.venue.name} · {event.venue.neighborhood}</p>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ export default {
   timezone: 'America/New_York',
   // Overall hours. null = not published. The deck shows 12 PM–11 PM as a
   // proposed flow; set this only once those hours are final.
-  hoursLabel: null,
+  hoursLabel: 'Noon–11 PM ET',
 
   presentedBy: ['GlobalLYNK', 'AmpSpot', 'NFNTE Capital'],
 
@@ -26,9 +26,9 @@ export default {
     neighborhood: 'Wynwood, Miami',
     // Street address: fill in once reconfirmed with the venue. While null,
     // the site shows the venue name + neighborhood only.
-    address: null,
+    address: '400 NW 26th St, Miami, FL 33127',
     // Directions link. While address is null this searches the venue name.
-    mapUrl: 'https://www.google.com/maps/search/?api=1&query=The+LAB+Miami+Wynwood',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=The+LAB+Miami%2C+400+NW+26th+St%2C+Miami%2C+FL+33127',
     arrival: null, // e.g. 'Check in at the front entrance on NW 26th St.' — only once confirmed
     parking: null,
     transit: null,

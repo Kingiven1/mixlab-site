@@ -11,7 +11,7 @@
 // ──────────────────────────────────────────────────────────────────────────
 
 export default {
-  mode: 'provisional',
+  mode: 'confirmed', // Noon–11 PM and the three blocks confirmed by Iven
   note: 'Times are Eastern and may change. Session times are confirmed closer to the event.',
   blocks: [
     {
@@ -31,7 +31,7 @@ export default {
     {
       status: 'published',
       time: '5–8 PM',
-      title: 'Networking & Conversation',
+      title: 'Social Hour with NFNTE Capital',
       area: null,
       summary: 'Networking, drinks, light bites and a DJ set, with a social equity conversation hosted by NFNTE Capital.',
       sessions: [

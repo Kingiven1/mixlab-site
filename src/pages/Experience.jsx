@@ -13,7 +13,7 @@ const EXPECT = [
   { label: 'Discover', title: 'Fireside chats & panels', copy: 'Real talk on creative business, AI and creative technology, and building a career around your craft.' },
   { label: 'Reflect', title: 'A mental health conversation', copy: 'An honest conversation about creative wellbeing and sustaining the work you love.' },
   { label: 'Celebrate', title: 'DJ performances', copy: 'Live sets through the day and three featured sets at night. Dancing encouraged.' },
-  { label: 'Connect', title: 'Networking & Conversation', copy: 'Meet the community over drinks, with a social equity conversation hosted by NFNTE Capital.' },
+  { label: 'Connect', title: 'Social Hour with NFNTE Capital', copy: 'Meet the community over drinks, with a social equity conversation hosted by NFNTE Capital.' },
 ];
 
 export default function Experience() {
@@ -63,7 +63,7 @@ export default function Experience() {
               </li>
             ))}
           </ul>
-          <p style={{ ...small, marginTop: '16px' }}>Planned program. Details are confirmed as the schedule is finalized.</p>
+          <p style={{ ...small, marginTop: '16px' }}>Complimentary admission. RSVP required.</p>
         </div>
       </section>
 
@@ -130,7 +130,7 @@ function Hero() {
             {event.tagline}
           </p>
           <p className="ml-rise ml-rise-3" style={{ fontFamily: font.display, fontWeight: 700, textTransform: 'uppercase', fontSize: 'clamp(22px, 2.6vw, 30px)', letterSpacing: '0.03em', color: color.cream, margin: '28px 0 0', lineHeight: 1.15 }}>
-            {event.dateLabel}<br />
+            {event.dateLabel}{event.hoursLabel ? ` · ${event.hoursLabel}` : ''}<br />
             <span style={{ color: color.coral }}>{event.venue.name} · {event.venue.neighborhood}</span>
           </p>
           <div className="ml-rise ml-rise-3" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '12px', marginTop: '32px' }}>
@@ -174,7 +174,8 @@ function VenueBlock() {
       </a>
       <dl style={{ margin: '24px 0 0', display: 'grid', gap: '14px' }}>
         <InfoRow k="Date" v={event.dateLabel} />
-        <InfoRow k="Hours" v={event.hoursLabel || 'Proposed 12–11 PM Eastern Time. Final hours confirmed soon.'} />
+        <InfoRow k="Hours" v={event.hoursLabel || 'Final hours announced soon (Eastern Time)'} />
+        <InfoRow k="Admission" v="Complimentary. RSVP required: attendance is by invitation request, and every request is reviewed." />
         <InfoRow k="Arrival" v={v.arrival || 'Arrival and check-in details will be posted before the event.'} />
         {v.parking && <InfoRow k="Parking" v={v.parking} />}
         {v.transit && <InfoRow k="Transit" v={v.transit} />}
