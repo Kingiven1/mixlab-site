@@ -23,7 +23,7 @@ export function ProvisionalNote({ style }) {
   return (
     <p style={{ ...small, display: 'inline-flex', alignItems: 'center', gap: '8px', border: `1px solid ${color.lineCoral}`, color: color.cream, borderRadius: radius.pill, padding: '6px 14px', ...style }}>
       <span aria-hidden="true" style={{ width: 8, height: 8, borderRadius: 8, background: color.coral, display: 'inline-block' }} />
-      Provisional schedule — {schedule.note}
+      Proposed times · Eastern Time. {schedule.note}
     </p>
   );
 }
@@ -33,9 +33,9 @@ export function TalentGrid({ expandable = false }) {
   if (!talent.length) {
     return (
       <div style={{ ...card, padding: 'clamp(32px, 6vw, 64px)', textAlign: 'center' }}>
-        <p style={{ ...eyebrow, marginBottom: '12px' }}>Lineup</p>
-        <p style={{ ...h3, fontSize: 'clamp(30px, 4vw, 44px)' }}>Lineup announcements coming soon.</p>
-        <p style={{ ...body, marginTop: '12px' }}>Join the updates list to hear first.</p>
+        <p style={{ ...eyebrow, marginBottom: '12px' }}>Featured talent</p>
+        <p style={{ ...h3, fontSize: 'clamp(30px, 4vw, 44px)' }}>Talent announcements coming soon.</p>
+        <p style={{ ...body, marginTop: '12px' }}>Get updates to hear first.</p>
       </div>
     );
   }

@@ -2,8 +2,8 @@
 // PUBLIC SCHEDULE — feeds the homepage preview AND the /guide page.
 // This is the guest-facing schedule, not the production run of show.
 //
-// mode: 'provisional' shows a clear "Provisional — subject to final
-//        scheduling" label on every page. Switch to 'confirmed' once final.
+// mode: 'provisional' labels every time as "Proposed" (Eastern Time) on the
+//        homepage and Guide. Switch to 'confirmed' only once Iven approves.
 // Blocks or sessions with status 'draft' stay private.
 // `talent` uses names exactly as written in talent.js.
 // `partnerCategory` puts that category's Community Partner logos on the session
@@ -12,7 +12,7 @@
 
 export default {
   mode: 'provisional',
-  note: 'Proposed flow. Individual sessions and set times are still being finalized.',
+  note: 'Times are Eastern and may change. Session times are confirmed closer to the event.',
   blocks: [
     {
       status: 'published',
@@ -31,9 +31,9 @@ export default {
     {
       status: 'published',
       time: '5–8 PM',
-      title: 'Social Hour with NFNTE Capital',
+      title: 'Networking & Conversation',
       area: null,
-      summary: 'A social equity conversation, networking, light bites, drinks and a DJ set.',
+      summary: 'Networking, drinks, light bites and a DJ set, with a social equity conversation hosted by NFNTE Capital.',
       sessions: [
         { status: 'published', title: 'Social equity conversation', detail: 'Hosted by NFNTE Capital.', area: null, time: null, talent: [], partnerCategory: 'community_social' },
       ],

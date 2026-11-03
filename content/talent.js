@@ -3,7 +3,8 @@
 // status: 'published' → public. 'draft' → never leaves your computer.
 // role: 'DJ' | 'Speaker' | 'Moderator' | 'Host' (a short combo like
 // 'DJ & Photographer' is fine). Photos go in /public/img/.
-// If nobody is published, the site shows "Lineup announcements coming soon".
+// If nobody is published, the site shows "Talent announcements coming soon".
+// King Iven is hosting, so he has no lineup card.
 // ──────────────────────────────────────────────────────────────────────────
 
 export default [
@@ -38,7 +39,7 @@ export default [
     link: null,
   },
   {
-    status: 'published',
+    status: 'draft', // held until Iven confirms
     name: 'DJ Aktive',
     role: 'DJ',
     city: 'Philadelphia',
@@ -48,7 +49,7 @@ export default [
     link: null,
   },
   {
-    status: 'published',
+    status: 'draft', // held until Iven confirms
     name: 'Brian Henry',
     role: 'DJ',
     city: 'Los Angeles',

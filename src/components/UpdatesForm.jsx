@@ -57,9 +57,9 @@ export default function UpdatesForm() {
   if (status === 'success') {
     return (
       <div role="status" style={{ padding: '20px', borderRadius: radius.md, border: `1px solid ${color.lineCoral}` }}>
-        <p style={{ fontWeight: 600, color: color.cream, margin: 0 }}>You're on the updates list.</p>
+        <p style={{ fontWeight: 600, color: color.cream, margin: 0 }}>You'll get Mix Lab updates.</p>
         <p style={{ ...small, marginTop: '6px', fontSize: '14px' }}>
-          This is not a registration. We'll email you when registration opens.
+          This doesn't request an invitation or reserve a place. We'll email you when invitation requests open.
         </p>
       </div>
     );
@@ -84,10 +84,10 @@ export default function UpdatesForm() {
       <input tabIndex={-1} autoComplete="off" aria-hidden="true" value={f.trap} onChange={set('trap')} style={{ position: 'absolute', left: '-9999px' }} />
       <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '14px', marginTop: '16px' }}>
         <button type="submit" disabled={status === 'loading'} className="ml-btn ml-ghost" style={{ ...buttonGhost, opacity: status === 'loading' ? 0.6 : 1 }}>
-          {status === 'loading' ? 'Joining…' : 'Join the updates list'}
+          {status === 'loading' ? 'Sending…' : 'Get updates'}
         </button>
         <p style={{ ...small, fontSize: '13px', maxWidth: '360px' }}>
-          Updates only — not a registration or RSVP. <a href={event.privacyUrl} style={{ color: color.creamSoft }}>Privacy</a>
+          Updates only — not an invitation request or RSVP. <a href={event.privacyUrl} style={{ color: color.creamSoft }}>Privacy</a>
         </p>
       </div>
       {status === 'error' && (

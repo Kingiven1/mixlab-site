@@ -13,7 +13,7 @@ const EXPECT = [
   { label: 'Discover', title: 'Fireside chats & panels', copy: 'Real talk on creative business, AI and creative technology, and building a career around your craft.' },
   { label: 'Reflect', title: 'A mental health conversation', copy: 'An honest conversation about creative wellbeing and sustaining the work you love.' },
   { label: 'Celebrate', title: 'DJ performances', copy: 'Live sets through the day and three featured sets at night. Dancing encouraged.' },
-  { label: 'Connect', title: 'Social hour with NFNTE Capital', copy: 'Networking, drinks and a social equity conversation hosted by NFNTE Capital.' },
+  { label: 'Connect', title: 'Networking & Conversation', copy: 'Meet the community over drinks, with a social equity conversation hosted by NFNTE Capital.' },
 ];
 
 export default function Experience() {
@@ -21,13 +21,13 @@ export default function Experience() {
     <>
       <Hero />
 
-      {/* 2 ── FLYER / EVENT AT A GLANCE */}
-      <section id="flyer" style={{ ...section, background: color.bg }} aria-labelledby="flyer-h">
+      {/* 2 ── FLYER — only shown once the approved flyer is added in content/event.js */}
+      {event.flyer && <section id="flyer" style={{ ...section, background: color.bg }} aria-labelledby="flyer-h">
         <div style={container}>
           <h2 id="flyer-h" style={{ ...eyebrow, marginBottom: '28px' }}>The event</h2>
           <Flyer />
         </div>
-      </section>
+      </section>}
 
       {/* 3 ── ABOUT */}
       <section id="about" style={{ ...section, background: color.surface }}>
@@ -39,8 +39,8 @@ export default function Experience() {
               conversations and community — a day-to-night celebration of DJing as an art form during Miami Art Week.
             </p>
             <p style={{ ...body, marginTop: '18px', fontSize: '17px' }}>
-              It's for DJs, creative entrepreneurs, music lovers and anyone who has ever watched a DJ and wondered
-              how they do it. Meet the artists behind the decks, learn how they create, and try the craft yourself.
+              It's for creators, DJs, entrepreneurs, music lovers and everyday people curious about DJing and art —
+              anyone who has ever watched a DJ and wondered how they do it. Meet the artists behind the decks, learn how they create, and try the craft yourself.
             </p>
           </div>
           <img src={asset('/img/community.webp')} alt="A crowd holding up phones at a previous GlobalLYNK event, lit in warm red and orange" loading="lazy"
@@ -63,16 +63,16 @@ export default function Experience() {
               </li>
             ))}
           </ul>
-          <p style={{ ...small, marginTop: '16px' }}>Planned program. Sessions and details are confirmed as the schedule is finalized.</p>
+          <p style={{ ...small, marginTop: '16px' }}>Planned program. Details are confirmed as the schedule is finalized.</p>
         </div>
       </section>
 
       {/* 5 ── LINEUP */}
       <section id="lineup" style={{ ...section, background: color.surface }}>
         <div style={container}>
-          <SectionHead kicker="Lineup" line1="Confirmed DJs &" line2="creative voices." />
+          <SectionHead kicker="The lineup" line1="Featured" line2="talent." />
           <TalentGrid />
-          <p style={{ ...small, marginTop: '24px' }}>More names to be announced. Individual roles and set times are in development.</p>
+          <p style={{ fontFamily: font.display, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em', fontSize: 'clamp(20px, 2.4vw, 26px)', color: color.coral, marginTop: '32px' }}>More talent announcements coming soon.</p>
         </div>
       </section>
 
@@ -83,7 +83,7 @@ export default function Experience() {
           <ProvisionalNote style={{ marginBottom: '24px' }} />
           <ScheduleList />
           <div style={{ marginTop: '24px' }}>
-            <TextLink to="/guide#schedule">Full schedule in the Event Guide →</TextLink>
+            <TextLink to="/guide#schedule">Session details in the Event Guide →</TextLink>
           </div>
         </div>
       </section>
@@ -174,7 +174,7 @@ function VenueBlock() {
       </a>
       <dl style={{ margin: '24px 0 0', display: 'grid', gap: '14px' }}>
         <InfoRow k="Date" v={event.dateLabel} />
-        <InfoRow k="Hours" v={event.hoursLabel || 'Final hours announced soon (Eastern Time)'} />
+        <InfoRow k="Hours" v={event.hoursLabel || 'Proposed 12–11 PM Eastern Time. Final hours confirmed soon.'} />
         <InfoRow k="Arrival" v={v.arrival || 'Arrival and check-in details will be posted before the event.'} />
         {v.parking && <InfoRow k="Parking" v={v.parking} />}
         {v.transit && <InfoRow k="Transit" v={v.transit} />}
@@ -198,21 +198,21 @@ function RegisterSection() {
       <div style={container}>
         <SectionHead
           center
-          kicker="Register"
-          line1={hasRegistration ? 'Save your spot.' : 'RSVP opens soon.'}
-          line2="Try the craft."
+          kicker="Attend"
+          line1={hasRegistration ? 'Request an' : 'Invitation requests'}
+          line2={hasRegistration ? 'invitation.' : 'open soon.'}
           intro={hasRegistration
-            ? 'Register through our official event page.'
-            : 'Registration isn’t open yet. Join the updates list and we’ll email you the moment it opens.'}
+            ? 'Submitting a request does not confirm attendance. All requests are reviewed.'
+            : 'Attendance is by invitation request, and every request is reviewed. Get updates and we’ll email you when requests open.'}
         />
         <div style={{ maxWidth: '760px', margin: '0 auto' }}>
           {hasRegistration ? (
             <div style={{ textAlign: 'center' }}><RegisterButton /></div>
           ) : (
             <div style={{ ...card, padding: 'clamp(20px, 4vw, 32px)' }}>
-              <p style={{ ...eyebrow, marginBottom: '6px' }}>Updates list</p>
+              <p style={{ ...eyebrow, marginBottom: '6px' }}>Get updates</p>
               <p style={{ ...body, marginBottom: '18px' }}>
-                Announcements only. Joining does <strong style={{ color: color.cream }}>not</strong> register you or reserve a spot.
+                News and announcements only. This does <strong style={{ color: color.cream }}>not</strong> request an invitation, register you or reserve a place.
               </p>
               <UpdatesForm />
             </div>

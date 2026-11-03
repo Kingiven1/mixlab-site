@@ -36,16 +36,16 @@ export default {
     photoNote: 'The venue before event styling.',
   },
 
-  // REGISTRATION. Paste the real RSVP/registration link here (Posh, Eventbrite,
-  // Luma, Tally…). While null, every Register button goes to the
-  // "RSVP opening soon" section and the updates list is clearly labelled as
-  // NOT a registration.
+  // ATTENDANCE. Paste the tested Luma event link here (approval required on
+  // every ticket type). Then every attendance button says "Request an
+  // invitation" and goes to Luma. While null, buttons say "Get updates" and the
+  // updates form is clearly labelled as NOT an invitation request.
   registrationUrl: null,
-  registrationLabel: 'Register',
+  registrationLabel: 'Request an invitation',
 
   // Flyer. Put the approved file in /public/img/ and set the path, e.g.
-  // '/img/mix-lab-flyer.jpg'. While null the flyer section shows the event
-  // details card instead.
+  // '/img/mix-lab-flyer.jpg'. While null the flyer section is hidden entirely
+  // (date, location and attendance info stay as text elsewhere on the page).
   flyer: null,
   flyerAlt: 'The Mix Lab event flyer',
 

@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import { event, hasRegistration } from '../lib/content';
 import { buttonPrimary } from '../styles/tokens';
 
-// Every Register button on the site. With a registration link it goes there;
-// without one it goes to the "RSVP opening soon" section on the homepage.
+// Every attendance button on the site. With the Luma link it says "Request an invitation"
+// and goes there; without one it says "Get updates" and goes to the homepage updates form.
 export default function RegisterButton({ style, children, compact }) {
   const s = { ...buttonPrimary, ...(compact ? { minHeight: '44px', padding: '0 18px', fontSize: '17px' } : {}), ...style };
-  const label = children || event.registrationLabel || 'Register';
+  const label = children || (hasRegistration ? event.registrationLabel : 'Get updates');
   if (hasRegistration) {
     return (
       <a href={event.registrationUrl} target="_blank" rel="noopener noreferrer" className="ml-btn" style={s}>
