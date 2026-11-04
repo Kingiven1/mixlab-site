@@ -11,7 +11,7 @@
 // ──────────────────────────────────────────────────────────────────────────
 
 export default {
-  mode: 'confirmed', // Noon–11 PM and the three blocks confirmed by Iven
+  mode: 'confirmed', // Noon–8 PM and the two blocks confirmed by Iven
   note: 'Times are Eastern and may change. Session times are confirmed closer to the event.',
   blocks: [
     {
@@ -31,20 +31,12 @@ export default {
     {
       status: 'published',
       time: '5–8 PM',
-      title: 'Social Hour with NFNTE Capital',
+      title: 'Social Hour Night Cap',
       area: null,
-      summary: 'Networking, drinks, light bites and a DJ set, with a social equity conversation hosted by NFNTE Capital.',
+      summary: 'Close out the day with networking, drinks, light bites and DJ sets, plus a social equity conversation hosted by NFNTE Capital.',
       sessions: [
         { status: 'published', title: 'Social equity conversation', detail: 'Hosted by NFNTE Capital.', area: null, time: null, talent: [], partnerCategory: 'community_social' },
       ],
-    },
-    {
-      status: 'published',
-      time: '8–11 PM',
-      title: 'The Night Session',
-      area: null,
-      summary: 'Three featured DJ sets, dancing and cocktails.',
-      sessions: [],
     },
   ],
 };

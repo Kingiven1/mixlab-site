@@ -12,8 +12,8 @@ const EXPECT = [
   { label: 'Learn', title: 'Hands-on DJ workshops', copy: 'Beginner-friendly and complimentary. Get on the decks with working DJs — no experience needed.' },
   { label: 'Discover', title: 'Fireside chats & panels', copy: 'Real talk on creative business, AI and creative technology, and building a career around your craft.' },
   { label: 'Reflect', title: 'A mental health conversation', copy: 'An honest conversation about creative wellbeing and sustaining the work you love.' },
-  { label: 'Celebrate', title: 'DJ performances', copy: 'Live sets through the day and three featured sets at night. Dancing encouraged.' },
-  { label: 'Connect', title: 'Social Hour with NFNTE Capital', copy: 'Meet the community over drinks, with a social equity conversation hosted by NFNTE Capital.' },
+  { label: 'Celebrate', title: 'DJ performances', copy: 'Live DJ sets through the afternoon and into the Social Hour Night Cap. Dancing encouraged.' },
+  { label: 'Connect', title: 'Social Hour Night Cap', copy: 'Meet the community over drinks, with a social equity conversation hosted by NFNTE Capital.' },
 ];
 
 export default function Experience() {
@@ -36,7 +36,7 @@ export default function Experience() {
             <SectionHead kicker="About the experience" line1="You hear the music." line2="See the art." />
             <p style={bodyLg}>
               The Mix Lab brings music, art, technology and culture together through hands-on learning,
-              conversations and community — a day-to-night celebration of DJing as an art form during Miami Art Week.
+              conversations and community — an afternoon-into-evening celebration of DJing as an art form during Miami Art Week.
             </p>
             <p style={{ ...body, marginTop: '18px', fontSize: '17px' }}>
               It's for creators, DJs, entrepreneurs, music lovers and everyday people curious about DJing and art —
@@ -51,7 +51,7 @@ export default function Experience() {
       {/* 4 ── WHAT TO EXPECT */}
       <section id="expect" style={section}>
         <div style={container}>
-          <SectionHead kicker="What to expect" line1="Day to night." line2="Hands on." />
+          <SectionHead kicker="What to expect" line1="Noon to night cap." line2="Hands on." />
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, borderTop: `1px solid ${color.lineCoral}` }}>
             {EXPECT.map((x) => (
               <li key={x.title} className="ml-row" style={{ padding: '22px 0', borderBottom: `1px solid ${color.lineCoral}` }}>

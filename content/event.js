@@ -17,7 +17,7 @@ export default {
   timezone: 'America/New_York',
   // Overall hours. null = not published. The deck shows 12 PM–11 PM as a
   // proposed flow; set this only once those hours are final.
-  hoursLabel: 'Noon–11 PM ET',
+  hoursLabel: 'Noon–8 PM ET',
 
   presentedBy: ['GlobalLYNK', 'AmpSpot', 'NFNTE Capital'],
 
