@@ -46,6 +46,8 @@ export default {
         'When the supply of American R&B dried up, the operators started recording Jamaican artists for their own systems. Reid moved into production in 1962, and Dodd opened Studio One in 1963. Their records helped carry ska, rocksteady and reggae. In 1970 Reid’s Treasure Isle released U-Roy’s “Wake the Town,” and the voice on the mic became the record. The same sound-system culture shaped a Kingston kid named Clive Campbell, who later moved to the Bronx and became DJ Kool Herc.',
       ],
       image: {
+        // Internal rights tracking — stripped from every build.
+        rights: { web: 'pending — Wayne Tippetts (1986 photo)', exhibition: 'pending — print permission not confirmed' },
         status: 'pending',
         // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
         reviewSrc: '/img/evolution-review/01-tenor-saw.webp',
@@ -57,7 +59,7 @@ export default {
         sourceUrl: 'https://waynetippetts.com/content/the-late-singer-and-deejay-tenor-saw-died-in1988-on-the-mic-youthman-promotion-sound-system-kingston-jamaica-1987/lightbox/',
       },
       listening: [
-        { artist: 'U-Roy', title: 'Wake the Town', year: '1970', url: 'https://music.apple.com/us/song/wake-the-town/196064169', why: 'A 1970 follow-on to this era: a Duke Reid production that put sound-system toasting on record.' },
+        { artist: 'U-Roy', title: 'Wake the Town', year: '1970', kind: 'track', url: 'https://open.spotify.com/track/3pJGjcPPSq8iJWCmsh32EU', why: 'Recorded just after this era (1970): a Duke Reid production that put sound-system toasting on record.' },
       ],
       playlistUrl: null,
       sources: [
@@ -79,6 +81,8 @@ export default {
         'That party is now marked as August 11, 1973, and the date anchors Hip Hop Celebration Day. Be clear on what the record holds: no recordings, film or surviving flyers document the night, the date was popularized in the 1990s, and other Bronx DJs were working at the same time. Historians still argue over whether one party can be called the birth of hip-hop. What is not in dispute is that Herc’s break-focused parties set the template for what came next.',
       ],
       image: {
+        // Internal rights tracking — stripped from every build.
+        rights: { web: 'cleared — public domain (Wikimedia Commons, Bigtimepeace 2009)', exhibition: 'cleared — public domain' },
         status: 'published',
         src: '/img/evolution/02-1520-sedgwick-avenue-640.webp',
         srcLarge: '/img/evolution/02-1520-sedgwick-avenue-960.webp',
@@ -90,7 +94,7 @@ export default {
         sourceUrl: 'https://commons.wikimedia.org/wiki/File:1520_Sedwick_Ave.,_Bronx,_New_York1.JPG',
       },
       listening: [
-        { artist: 'Incredible Bongo Band', title: 'Apache', year: '1973', url: 'https://music.apple.com/us/song/apache/1304461375', why: 'Its long percussion break became an early Bronx party staple, and Grandmaster Flash later cut it into “Wheels of Steel.”' },
+        { artist: 'Incredible Bongo Band', title: 'Apache', year: '1973', kind: 'track', url: 'https://open.spotify.com/track/3Ftk94LnFgS7px3bZpu81p', why: 'Its long percussion break became an early Bronx party staple, and Grandmaster Flash later cut it into “Wheels of Steel.”' },
       ],
       playlistUrl: null,
       sources: [
@@ -111,18 +115,21 @@ export default {
         'Grand Wizzard Theodore, a teenager in Flash’s circle, is widely credited with inventing the scratch. In his telling, he was practicing at home when his mother came to the door; he held the record and moved it back and forth, and liked the sound. Accounts date that moment to 1975 or 1977. He is also credited with the needle drop. The turntables of his in the Smithsonian’s collection are later Vestax models, not the decks he used in the 1970s.',
       ],
       image: {
-        status: 'pending',
+        // Internal rights tracking — stripped from every build.
+        rights: { web: 'cleared — Smithsonian CC0, clean object photo (nmaahc_2015.142a-g)', exhibition: 'CHANGE NEEDED — wall print uses the branded reference; reprint from the clean CC0 high-res JPEG on the object page' },
+        status: 'published',
+        src: '/img/evolution/03-theodore-turntables-smithsonian-640.webp',
+        width: 640,
+        height: 469,
+        alt: 'A pair of silver Vestax turntables with black slipmats, photographed under a spotlight on a wooden surface.',
+        credit: 'Turntables used by Grand Wizzard Theodore (Vestax PDX-2000). Smithsonian National Museum of African American History and Culture. CC0.',
+        laterNote: 'Later-career decks from the 2000s, not the turntables he used in the 1970s.',
+        sourceUrl: 'https://www.si.edu/object/turntable-used-grand-wizzard-theodore:nmaahc_2015.142a-g',
         // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
         reviewSrc: '/img/evolution-review/03-theodore-turntables.webp',
-        width: 800,
-        height: 450,
-        alt: 'Two silver turntables on a wooden surface in a Smithsonian Anthology of Hip-Hop and Rap image labeled “Turntable used by Grand Wizzard Theodore.”',
-        wallCredit: 'Later-career turntables used by Grand Wizzard Theodore. Smithsonian National Museum of African American History and Culture, Gift of Grand Wizzard Theodore.',
-        wallNote: 'The photo on the wall shows Theodore’s later-career turntables.',
-        sourceUrl: 'https://music.si.edu/node/1314',
       },
       listening: [
-        { artist: 'Grandmaster Flash', title: 'The Adventures of Grandmaster Flash on the Wheels of Steel', year: '1981', url: 'https://music.apple.com/us/song/the-adventures-of-grandmaster-flash-on-the-wheels-of-steel/59389715', why: 'Quick Mix Theory on record: a DJ performance cut live on three turntables.' },
+        { artist: 'Grandmaster Flash & The Furious Five', title: 'The Adventures of Grandmaster Flash on the Wheels of Steel', year: '1981', kind: 'track', url: 'https://open.spotify.com/track/337kiE05lPhwEsia5JiLsq', why: 'Quick Mix Theory on record: a DJ performance cut live on three turntables.' },
       ],
       playlistUrl: null,
       sources: [
@@ -144,6 +151,8 @@ export default {
         'Detroit took a different route. Juan Atkins, Derrick May and Kevin Saunderson, high-school friends known as the Belleville Three, made tracks in their basements out of Kraftwerk, Parliament and Prince. Atkins’s group Cybotron released “Alleys of Your Mind” in 1981, and his Metroplex label followed in 1985. May’s “Strings of Life,” released on Transmat in 1987 as Rhythim Is Rhythim, was built from a piano sequence by Michael James. A 1988 UK compilation, Techno! The New Dance Sound of Detroit, gave the sound its name.',
       ],
       image: {
+        // Internal rights tracking — stripped from every build.
+        rights: { web: 'pending — Detroit Historical Society still (2002 DEMF look-back); Chicago photo still missing', exhibition: 'pending — Detroit Historical Society' },
         status: 'pending',
         // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
         reviewSrc: '/img/evolution-review/04-detroit-techno.webp',
@@ -155,8 +164,8 @@ export default {
         sourceUrl: 'https://www.detroithistorical.org/learn/online-research/blog/flashback-2002-detroit-electronic-music-festival',
       },
       listening: [
-        { artist: 'Frankie Knuckles feat. Jamie Principle', title: 'Your Love', year: '1986–87', url: null, why: 'Written by Jamie Principle and broken on Knuckles’s dance floor before it was ever pressed.' },
-        { artist: 'Rhythim Is Rhythim', title: 'Strings of Life', year: '1987', url: 'https://music.apple.com/us/song/strings-of-life/1831059987', why: 'Detroit techno’s best-known early record, released on Transmat.' },
+        { artist: 'Frankie Knuckles feat. Jamie Principle', title: 'Your Love', year: '1986–87', kind: 'track', url: 'https://open.spotify.com/track/6tvtFyEdNpeurBkT2zNMEL', why: 'Written by Jamie Principle and broken on Knuckles’s dance floor before it was ever pressed.' },
+        { artist: 'Rhythim Is Rhythim', title: 'Strings of Life', year: '1987', kind: 'track', url: 'https://open.spotify.com/track/7sMA8Psr0iDjicbrGXgDuR', why: 'Detroit techno’s best-known early record, released on Transmat.' },
       ],
       playlistUrl: null,
       sources: [
@@ -178,6 +187,8 @@ export default {
         'In Philadelphia, DJ Jazzy Jeff won the 1986 New Music Seminar battle, and his robotic “transformer” scratch reached a pop audience through his records with The Fresh Prince, from He’s the DJ, I’m the Rapper to “Summertime” in 1991. Deidra “Dee Dee” Roper became Salt-N-Pepa’s DJ Spinderella in 1987, taking over from Latoya Hanson, and put a woman DJ on stage and on screen with one of rap’s biggest groups. “Push It,” from their 1986 debut, became their breakthrough.',
       ],
       image: {
+        // Internal rights tracking — stripped from every build.
+        rights: { web: 'pending — © Al Pereira; Smithsonian record says permission required', exhibition: "pending — © Al Pereira; also confirm the caption (photo shows a studio interior, record says 'outside Bayside Studios')" },
         status: 'pending',
         // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
         reviewSrc: '/img/evolution-review/05-salt-n-pepa.webp',
@@ -189,8 +200,8 @@ export default {
         sourceUrl: 'https://nmaahc.si.edu/object/nmaahc_2015.132.311',
       },
       listening: [
-        { artist: 'DJ Jazzy Jeff & The Fresh Prince', title: 'Summertime', year: '1991', url: 'https://music.apple.com/us/song/summertime/298554177', why: 'The DJ-and-rapper duo at full pop reach.' },
-        { artist: 'Salt-N-Pepa', title: 'Push It', year: '1986', url: 'https://music.apple.com/us/song/push-it/1422950119', why: 'The group’s breakthrough, from the album era when Spinderella joined.' },
+        { artist: 'DJ Jazzy Jeff & The Fresh Prince', title: 'Summertime', year: '1991', kind: 'track', url: 'https://open.spotify.com/track/0Ah7XjkHDO5aOzfxNqd31S', why: 'The DJ-and-rapper duo at full pop reach.' },
+        { artist: 'Salt-N-Pepa', title: 'Push It', year: '1986', kind: 'track', url: null, heldUrl: 'https://open.spotify.com/track/6qhQuDuiv6U3bEe4i9fwS1', heldReason: 'Spotify shows every version of Push It as unavailable in the U.S. (checked Nov 15, 2026).', why: 'The group’s breakthrough, from the album era when Spinderella joined.' },
       ],
       playlistUrl: null,
       sources: [
@@ -212,6 +223,8 @@ export default {
         'In Manchester, Flesh became the Haçienda’s first gay night: a monthly party for the city’s queer community, founded by Paul Cons and Lucy Scher, that ran through the 1990s. DJ Paulette was a resident downstairs for about four and a half years. In Detroit, DJ Minx founded Women on Wax in 1996 as a platform for women DJs in the city, and added a record label in 2001.',
       ],
       image: {
+        // Internal rights tracking — stripped from every build.
+        rights: { web: 'pending — Paul Jones / Manchester Digital Music Archive', exhibition: 'pending — confirm exhibition rights with MDMA' },
         status: 'pending',
         // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
         reviewSrc: '/img/evolution-review/06-flesh-hacienda.webp',
@@ -223,7 +236,7 @@ export default {
         sourceUrl: 'https://www.mdmarchive.co.uk/artefact/16471/Kath-McDermott-Tim-Lennox-DJ-Paulette-Coco--Angel-The-Hacienda-Press-1992',
       },
       listening: [
-        { artist: 'Carl Cox', title: 'F.A.C.T. (mix album)', year: '1995', url: null, why: 'A mid-’90s Carl Cox mix from the rave-to-global-club years.' },
+        { artist: 'Carl Cox', title: 'F.A.C.T.', year: '1995', kind: 'album', url: null, heldUrl: 'https://open.spotify.com/album/5xRLo321YU8tAN9QaMdWEU', heldReason: 'The Spotify compilation page loads, but none of its 27 tracks play in the U.S. (checked Nov 15, 2026).', why: 'A mid-’90s Carl Cox mix from the rave-to-global-club years.' },
       ],
       playlistUrl: null,
       sources: [
@@ -245,6 +258,8 @@ export default {
         'In Atlanta, DJ Drama made Gangsta Grillz a rite of passage, helping T.I., Young Jeezy and others reach far beyond the South; Lil Wayne’s Dedication 2 (2006) became one of the era’s most celebrated tapes. In January 2007 police raided Drama’s studio and seized about 81,000 mixtapes, a reminder that the format lived in a legal gray zone. That same year, DJ Khaled’s “We Takin’ Over” put Akon, T.I., Rick Ross, Fat Joe, Birdman and Lil Wayne on one record, with the DJ as the one who brought them together.',
       ],
       image: {
+        // Internal rights tracking — stripped from every build.
+        rights: { web: 'pending — Patrick Neree (2014)', exhibition: 'pending — Patrick Neree' },
         status: 'pending',
         // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
         reviewSrc: '/img/evolution-review/07-clue-flex.webp',
@@ -256,9 +271,9 @@ export default {
         sourceUrl: 'https://www.vice.com/en/article/funkmaster-flex-dj-clue-hot97-power105-dj-battle-rivalry/',
       },
       listening: [
-        { artist: 'DJ Clue', title: 'The Professional', year: '1998', url: 'https://music.apple.com/us/album/the-professional/1445883003', why: 'The street mixtape, released as a major-label album.' },
-        { artist: 'Lil Wayne & DJ Drama', title: 'Dedication 2', year: '2006', url: null, why: 'A Gangsta Grillz tape that became one of the most celebrated of its era.' },
-        { artist: 'DJ Khaled', title: 'We Takin’ Over', year: '2007', url: 'https://music.apple.com/us/album/we-takin-over-feat-akon-t-i/220266442', why: 'The DJ as convener: six artists on one single.' },
+        { artist: 'DJ Clue', title: 'The Professional', year: '1998', kind: 'album', url: 'https://open.spotify.com/album/7CcAkgGMwqQ0x9F9D4RwwL', why: 'The street mixtape, released as a major-label album.' },
+        { artist: 'Lil Wayne & DJ Drama', title: 'Dedication 2', year: '2006', kind: 'album', url: null, heldReason: 'No authorized full release confirmed; the Spotify listings found play only 1 of 25 tracks.', why: 'A Gangsta Grillz tape that became one of the most celebrated of its era.' },
+        { artist: 'DJ Khaled', title: 'We Takin’ Over', year: '2007', kind: 'track', url: 'https://open.spotify.com/track/6BJodnFEjmRr0jzneHcWXO', why: 'The DJ as convener: a single built around a lineup of guest rappers and singers.' },
       ],
       playlistUrl: null,
       sources: [
@@ -280,6 +295,8 @@ export default {
         'Joe Kay started a podcast in 2007 and in 2011 co-founded Soulection with Andre Power and Guillaume “96” Bonte. Soulection Radio first aired on January 24, 2011, on KBeach, the student station at Cal State Long Beach, and moved to Apple’s Beats 1 in 2015. The show grew into a label, tours and a global community built around finding new music before everyone else.',
       ],
       image: {
+        // Internal rights tracking — stripped from every build.
+        rights: { web: 'pending — Daniel Ramos (@spiribolt); no DJ AM photo yet', exhibition: 'pending — Daniel Ramos' },
         status: 'pending',
         // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
         reviewSrc: '/img/evolution-review/08-joe-kay.webp',
@@ -291,8 +308,8 @@ export default {
         sourceUrl: 'https://www.miaminewtimes.com/music/joe-kay-celebrates-15-years-of-soulection-at-miamis-club-space-40517731/',
       },
       listening: [
-        { artist: 'DJ AM', title: 'An archival DJ AM set', year: '2000s', url: null, why: 'Hear the genre-switching for yourself once an authorized recording is confirmed.' },
-        { artist: 'Soulection', title: 'Soulection Radio', year: '2011–', url: 'https://music.apple.com/us/curator/soulection/993271379', why: 'The show that grew from a college radio slot into a label and community.' },
+        { artist: 'DJ AM', title: 'An archival DJ AM set', year: '2000s', kind: 'set', url: null, heldReason: 'No authorized archival recording confirmed yet.', why: 'Hear the genre-switching for yourself once an authorized recording is confirmed.' },
+        { artist: 'Soulection', title: 'Soulection Radio', year: '2011–', kind: 'radio', linkLabel: 'Explore Soulection Radio', url: 'https://radio.soulection.com/', why: 'The show that grew from a college radio slot into a label and community.' },
       ],
       playlistUrl: null,
       sources: [
@@ -314,6 +331,8 @@ export default {
         'Uncle Waffles was born and raised in Eswatini and is based in South Africa. In October 2021 she filled in for another DJ at Zone 6 in Soweto, and a clip of her set spread around the world. Her debut single “Tanzania,” with Tony Duardo, Sino Msolo and BoiBizza, followed in March 2022. In April 2023 she became the first amapiano artist to perform at Coachella.',
       ],
       image: {
+        // Internal rights tracking — stripped from every build.
+        rights: { web: 'pending — divisuals (Coachella 2023)', exhibition: 'pending — divisuals' },
         status: 'pending',
         // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
         reviewSrc: '/img/evolution-review/09-uncle-waffles.webp',
@@ -325,8 +344,8 @@ export default {
         sourceUrl: 'https://floodmagazine.com/131434/live-in-photos-do-lab-at-coachella-2023-ft-odesza-james-blake-and-more/',
       },
       listening: [
-        { artist: 'Black Coffee', title: 'Subconsciously', year: '2021', url: 'https://music.apple.com/za/album/subconsciously/1540737975', why: 'The GRAMMY-winning album.' },
-        { artist: 'Uncle Waffles & Tony Duardo feat. Sino Msolo & BoiBizza', title: 'Tanzania', year: '2022', url: 'https://music.apple.com/us/song/1614640119', why: 'The debut single that followed her viral Soweto set.' },
+        { artist: 'Black Coffee', title: 'Subconsciously', year: '2021', kind: 'album', url: 'https://open.spotify.com/album/50jhbcGdbYE0u2LVph6j3x', why: 'The GRAMMY-winning album.' },
+        { artist: 'Uncle Waffles & Tony Duardo feat. Sino Msolo & BoiBizza', title: 'Tanzania', year: '2022', kind: 'track', url: 'https://open.spotify.com/track/4qm0rzVQA3kqQ0yA7LkuFK', why: 'The debut single that followed her viral Soweto set.' },
       ],
       playlistUrl: null,
       sources: [
