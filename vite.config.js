@@ -10,7 +10,7 @@ import { pathToFileURL } from 'node:url';
 // drafts never reach the browser, not even hidden. To see drafts locally, run
 // `npm run dev:drafts` (they show with a DRAFT badge; never deploy that way).
 // ──────────────────────────────────────────────────────────────────────────
-const CONTENT_FILES = ['event', 'talent', 'schedule', 'partners', 'sponsors', 'faq'];
+const CONTENT_FILES = ['event', 'talent', 'schedule', 'partners', 'sponsors', 'faq', 'evolution'];
 const VIRTUAL = 'virtual:content';
 const RESOLVED = '\0' + VIRTUAL;
 
