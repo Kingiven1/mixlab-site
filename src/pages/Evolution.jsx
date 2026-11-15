@@ -136,6 +136,22 @@ function EraChips() {
   );
 }
 
+// When the framed print differs from the web photo, say so and credit it separately.
+function WallCard({ wall }) {
+  return (
+    <aside aria-label="About the photo on the wall" style={{ ...card, padding: '16px 18px', marginTop: '14px', borderColor: color.lineCoral }}>
+      <p style={{ ...eyebrow, fontSize: '12px', marginBottom: '8px' }}>On the wall</p>
+      <p style={{ ...body, color: color.cream, fontSize: '15px' }}>{wall.credit}</p>
+      {wall.note && <p style={{ ...body, fontSize: '14px', marginTop: '6px' }}>{wall.note}</p>}
+      {wall.sourceUrl && (
+        <a href={wall.sourceUrl} target="_blank" rel="noopener noreferrer" className="ml-link" style={{ ...body, fontSize: '14px', color: color.cream, display: 'inline-flex', alignItems: 'center', minHeight: '44px' }}>
+          Wall photo source<span aria-hidden="true">&nbsp;↗</span>
+        </a>
+      )}
+    </aside>
+  );
+}
+
 function EraImage({ era, eager }) {
   const img = era.image;
   if (img && img.status === 'published' && img.src) {
@@ -157,6 +173,7 @@ function EraImage({ era, eager }) {
           {img.laterNote && <><br /><strong style={{ color: color.cream, fontWeight: 600 }}>{img.laterNote}</strong></>}
           {img.sourceUrl && <>{' '}<a href={img.sourceUrl} target="_blank" rel="noopener noreferrer" className="ml-link" style={{ color: color.cream }}>Image source<span aria-hidden="true"> ↗</span></a></>}
         </figcaption>
+        {img.wall && <WallCard wall={img.wall} />}
       </figure>
     );
   }
@@ -211,6 +228,9 @@ function Listening({ era }) {
         {era.listening.map((l) => (
           <li key={l.title} style={{ ...card, padding: '14px 16px', display: 'flex', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
             <div style={{ flex: '1 1 220px' }}>
+              {l.tag && (
+                <span style={{ display: 'inline-block', marginBottom: '6px', padding: '2px 10px', borderRadius: radius.pill, border: `1px solid ${color.lineCoral}`, color: color.coral, fontSize: '12px', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase' }}>{l.tag}</span>
+              )}
               <p style={{ margin: 0, fontWeight: 600, color: color.cream, fontSize: '16px', lineHeight: 1.35 }}>
                 “{l.title}” <span style={{ fontWeight: 400, color: color.creamSoft }}>· {l.artist} · {l.year}</span>
               </p>

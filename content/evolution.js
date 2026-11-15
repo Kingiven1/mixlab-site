@@ -29,7 +29,7 @@ export default {
   kicker: 'The Mix Lab · Photo wall exhibit',
   intro: [
     'Nine photographs, seven decades. From Kingston sound systems to amapiano on festival main stages, this is how the person behind the decks went from playing records to shaping culture.',
-    'Scanned a code at the wall? You landed on that photo’s era. Scroll on for the full timeline, or jump straight to any era below. No account needed, and you can share the whole thing.',
+    'Pick an era below to explore the history, photos, and music.',
   ],
   sourcesNote: 'Dates and credits were checked against the linked sources. Where the record is unsettled, we say so.',
 
@@ -47,19 +47,25 @@ export default {
       ],
       image: {
         // Internal rights tracking — stripped from every build.
-        rights: { web: 'pending — Wayne Tippetts (1986 photo)', exhibition: 'pending — print permission not confirmed' },
-        status: 'pending',
-        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
-        reviewSrc: '/img/evolution-review/01-tenor-saw.webp',
+        rights: { web: 'cleared — CC BY-SA 2.0, Christina Xu via Wikimedia Commons (credit + license shown)', exhibition: 'pending — © Wayne Tippetts, Smithsonian says permission required (NMAAHC 2015.132.420.1-.2, dated 1986)' },
+        status: 'published',
+        src: '/img/evolution/01-coxsone-dodd-corner-kingston-2007-800.webp',
         width: 800,
-        height: 597,
-        alt: 'Two black-and-white frames from a sound-system dance: young men crowd around a turntable while a selector handles a record and another man speaks into a microphone.',
-        wallCredit: 'Tenor Saw. Photo by Wayne Tippetts.',
-        wallNote: 'The photo on the wall shows singer and deejay Tenor Saw on the mic at the Youthman Promotion sound system in Kingston in 1986, decades after this era. It shows the culture the early systems built.',
-        sourceUrl: 'https://waynetippetts.com/content/the-late-singer-and-deejay-tenor-saw-died-in1988-on-the-mic-youthman-promotion-sound-system-kingston-jamaica-1987/lightbox/',
+        height: 532,
+        alt: 'A Kingston street corner in 2007: a weathered yellow wooden building with a hand-painted “Speaker Repairs” sign, a tree and a quiet road beside it.',
+        credit: 'Kingston street corner identified by the photographer as where Coxsone Dodd started his sound-system career. Photo by Christina Xu, 2007. CC BY-SA 2.0.',
+        laterNote: 'Photographed in 2007, decades after this era.',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Corner_Coxsone_Dodd_Kingston_Jamaica.jpg',
+        // The framed print on the wall is a different photo.
+        wall: {
+          credit: 'Tenor Saw with engineer Tulluice at the Youthman Promotion sound system, Kingston, 1986. Photo by Wayne Tippetts.',
+          note: 'The wall shows a different photo: Wayne Tippetts’s 1986 diptych of singer and deejay Tenor Saw on the mic, a later example of the sound-system tradition. The Smithsonian holds a print. It is not shown here because web permission has not been granted.',
+          sourceUrl: 'https://www.si.edu/object/photographic-print-tenor-saw:nmaahc_2015.132.420.1-.2',
+        },
       },
       listening: [
         { artist: 'U-Roy', title: 'Wake the Town', year: '1970', kind: 'track', url: 'https://open.spotify.com/track/3pJGjcPPSq8iJWCmsh32EU', why: 'Recorded just after this era (1970): a Duke Reid production that put sound-system toasting on record.' },
+        { artist: 'Sister Nancy', title: 'Bam Bam', year: '1982', tag: 'Later example', kind: 'track', url: 'https://open.spotify.com/track/1XYU656BgbRoRrVWVn7bBF', why: 'A 1982 dancehall classic, produced by Winston Riley, that carries the deejay-on-the-mic tradition the early sound systems started.' },
       ],
       playlistUrl: null,
       sources: [
@@ -95,6 +101,7 @@ export default {
       },
       listening: [
         { artist: 'Incredible Bongo Band', title: 'Apache', year: '1973', kind: 'track', url: 'https://open.spotify.com/track/3Ftk94LnFgS7px3bZpu81p', why: 'Its long percussion break became an early Bronx party staple, and Grandmaster Flash later cut it into “Wheels of Steel.”' },
+        { artist: 'The Sugarhill Gang', title: 'Rapper’s Delight', year: '1979', tag: 'Later crossover', kind: 'track', url: 'https://open.spotify.com/track/7sZDbHZiuHEzS00vzCuhqS', why: 'Six years after Sedgwick Avenue, the first rap record to become a commercial hit took the party sound to radio.' },
       ],
       playlistUrl: null,
       sources: [
@@ -129,6 +136,7 @@ export default {
         reviewSrc: '/img/evolution-review/03-theodore-turntables.webp',
       },
       listening: [
+        { artist: 'Herbie Hancock', title: 'Rockit', year: '1983', tag: 'Start here', kind: 'track', url: 'https://open.spotify.com/track/1S53FE6U2VtmHlvH5ceq4d', why: 'The scratching on this hit is GrandMixer D.ST on the turntables; for many listeners it was the first scratch they ever heard, and it won a GRAMMY in 1984.' },
         { artist: 'Grandmaster Flash & The Furious Five', title: 'The Adventures of Grandmaster Flash on the Wheels of Steel', year: '1981', kind: 'track', url: 'https://open.spotify.com/track/337kiE05lPhwEsia5JiLsq', why: 'Quick Mix Theory on record: a DJ performance cut live on three turntables.' },
       ],
       playlistUrl: null,
@@ -152,18 +160,24 @@ export default {
       ],
       image: {
         // Internal rights tracking — stripped from every build.
-        rights: { web: 'pending — Detroit Historical Society still (2002 DEMF look-back); Chicago photo still missing', exhibition: 'pending — Detroit Historical Society' },
-        status: 'pending',
-        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
-        reviewSrc: '/img/evolution-review/04-detroit-techno.webp',
+        rights: { web: 'cleared — CC BY 2.0, deepstereo via Wikimedia Commons', exhibition: 'pending — Detroit Historical Society' },
+        status: 'published',
+        src: '/img/evolution/04-frankie-knuckles-2012-800.webp',
         width: 800,
-        height: 671,
-        alt: 'Four video stills of men talking during an interview, from the Detroit Historical Society archive.',
-        wallCredit: 'Detroit techno pioneers in conversation. Archival still courtesy Detroit Historical Society.',
-        wallNote: 'The still on the wall comes from a Detroit Historical Society look back at the 2002 Detroit Electronic Music Festival, a later image of the pioneers.',
-        sourceUrl: 'https://www.detroithistorical.org/learn/online-research/blog/flashback-2002-detroit-electronic-music-festival',
+        height: 533,
+        alt: 'Frankie Knuckles behind a bank of DJ mixers and CDJs, wearing a black T-shirt, with people gathered around the booth in a dim club.',
+        credit: 'Frankie Knuckles DJing at the Sugar Factory, Amsterdam Dance Event, October 2012. Photo by deepstereo. CC BY 2.0.',
+        laterNote: 'A later photo, from 2012.',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Frankie_Knuckles_@_ADE_2012.jpg',
+        // The framed print on the wall is a different photo.
+        wall: {
+          credit: 'Detroit techno pioneers in conversation. Archival still courtesy Detroit Historical Society.',
+          note: 'The wall shows a different image: interview stills of the Detroit techno pioneers from a Detroit Historical Society look back at the 2002 Detroit Electronic Music Festival. Web permission has not been granted, so the site shows Frankie Knuckles instead.',
+          sourceUrl: 'https://www.detroithistorical.org/learn/online-research/blog/flashback-2002-detroit-electronic-music-festival',
+        },
       },
       listening: [
+        { artist: 'Mr. Fingers', title: 'Can You Feel It', year: '1986', tag: 'Start here', kind: 'track', url: 'https://open.spotify.com/track/5479eh8cRkMdukYI3gtO36', why: 'Larry Heard’s Chicago house landmark: deep, warm and built on a drum machine and synth.' },
         { artist: 'Frankie Knuckles feat. Jamie Principle', title: 'Your Love', year: '1986–87', kind: 'track', url: 'https://open.spotify.com/track/6tvtFyEdNpeurBkT2zNMEL', why: 'Written by Jamie Principle and broken on Knuckles’s dance floor before it was ever pressed.' },
         { artist: 'Rhythim Is Rhythim', title: 'Strings of Life', year: '1987', kind: 'track', url: 'https://open.spotify.com/track/7sMA8Psr0iDjicbrGXgDuR', why: 'Detroit techno’s best-known early record, released on Transmat.' },
       ],
@@ -188,18 +202,24 @@ export default {
       ],
       image: {
         // Internal rights tracking — stripped from every build.
-        rights: { web: 'pending — © Al Pereira; Smithsonian record says permission required', exhibition: 'pending — © Al Pereira (Smithsonian: permission required). Caption fixed: the saved photo is NMAAHC 2015.132.310, recording inside Bayside Studios, Queens, Feb 6 1989' },
-        status: 'pending',
-        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
-        reviewSrc: '/img/evolution-review/05-salt-n-pepa.webp',
+        rights: { web: 'cleared — CC BY 2.0, Neil Rickards via Wikimedia Commons', exhibition: 'pending — © Al Pereira (Smithsonian: permission required). Same image as NMAAHC 2015.132.310, confirmed by visual match' },
+        status: 'published',
+        src: '/img/evolution/05-dj-jazzy-jeff-2005-800.webp',
         width: 800,
-        height: 597,
-        alt: 'Black-and-white photo of three women laughing and singing together in a recording studio, with a microphone hanging above them.',
-        wallCredit: 'Salt-N-Pepa with DJ Spinderella at Bayside Studios. Photo by Al Pereira.',
-        wallNote: 'The photo on the wall shows the group recording at Bayside Studios in Queens on February 6, 1989. The print is held by the Smithsonian’s National Museum of African American History and Culture. Photo © Al Pereira.',
-        sourceUrl: 'https://www.si.edu/object/nmaahc_2015.132.310',
+        height: 518,
+        alt: 'DJ Jazzy Jeff at the turntables with a laptop, in front of a graffiti backdrop reading “Hip Hop, R&B,” with speakers on stands.',
+        credit: 'DJ Jazzy Jeff in Cambridge, England, May 25, 2005. Photo by Neil Rickards. CC BY 2.0.',
+        laterNote: 'A later photo, from 2005.',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:DJ_Jazzy_Jeff.jpg',
+        // The framed print on the wall is a different photo.
+        wall: {
+          credit: 'Salt-N-Pepa with DJ Spinderella at Bayside Studios. Photo by Al Pereira.',
+          note: 'The wall shows a different photo: Al Pereira’s February 6, 1989 picture of Salt-N-Pepa and DJ Spinderella recording at Bayside Studios in Queens, held by the Smithsonian. It is not shown here because web permission has not been granted.',
+          sourceUrl: 'https://www.si.edu/object/nmaahc_2015.132.310',
+        },
       },
       listening: [
+        { artist: 'Salt-N-Pepa', title: 'Shoop', year: '1993', tag: 'Start here', kind: 'track', url: 'https://open.spotify.com/track/1ede8VC8M6Po6njXkybEq5', why: 'The group’s 1993 hit with DJ Spinderella on the lineup; the playable Salt-N-Pepa pick while “Push It” is unavailable on Spotify in the U.S.' },
         { artist: 'DJ Jazzy Jeff & The Fresh Prince', title: 'Summertime', year: '1991', kind: 'track', url: 'https://open.spotify.com/track/0Ah7XjkHDO5aOzfxNqd31S', why: 'The DJ-and-rapper duo at full pop reach.' },
         { artist: 'Salt-N-Pepa', title: 'Push It', year: '1986', kind: 'track', url: null, heldUrl: 'https://open.spotify.com/track/6qhQuDuiv6U3bEe4i9fwS1', heldReason: 'Spotify shows every version of Push It as unavailable in the U.S. (checked Nov 15, 2026).', why: 'The group’s breakthrough, from the album era when Spinderella joined.' },
       ],
@@ -224,18 +244,24 @@ export default {
       ],
       image: {
         // Internal rights tracking — stripped from every build.
-        rights: { web: 'pending — Paul Jones / Manchester Digital Music Archive', exhibition: 'pending — confirm exhibition rights with MDMA' },
-        status: 'pending',
-        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
-        reviewSrc: '/img/evolution-review/06-flesh-hacienda.webp',
+        rights: { web: 'cleared — CC BY 2.0, Sergey Kozak via Wikimedia Commons', exhibition: 'pending — confirm exhibition rights with MDMA / Paul Jones' },
+        status: 'published',
+        src: '/img/evolution/06-carl-cox-2012-800.webp',
         width: 800,
-        height: 1102,
-        alt: 'A 1992 magazine spread of numbered snapshots from Flesh at the Haçienda: dressed-up clubgoers posing alone, in pairs and in groups.',
-        wallCredit: 'Flesh at the Haçienda, September 1992. Photo by Paul Jones, via Manchester Digital Music Archive.',
-        wallNote: 'The wall shows a 1992 press spread from Flesh; DJ Paulette is in frame 10.',
-        sourceUrl: 'https://www.mdmarchive.co.uk/artefact/16471/Kath-McDermott-Tim-Lennox-DJ-Paulette-Coco--Angel-The-Hacienda-Press-1992',
+        height: 533,
+        alt: 'Carl Cox smiling in sunglasses and a dark jacket, outdoors in a crowd during Amsterdam Dance Event.',
+        credit: 'Carl Cox at Amsterdam Dance Event, October 2012. Photo by Sergey Kozak. CC BY 2.0.',
+        laterNote: 'A later photo, from 2012.',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Carl_Cox_@_ADE_2012.jpg',
+        // The framed print on the wall is a different photo.
+        wall: {
+          credit: 'Flesh at the Haçienda, September 1992. Photo by Paul Jones, via Manchester Digital Music Archive.',
+          note: 'The wall shows a different image: a September 1992 press spread from Flesh at the Haçienda, with DJ Paulette in frame 10. Web permission has not been granted, so the site shows Carl Cox instead.',
+          sourceUrl: 'https://www.mdmarchive.co.uk/artefact/16471/Kath-McDermott-Tim-Lennox-DJ-Paulette-Coco--Angel-The-Hacienda-Press-1992',
+        },
       },
       listening: [
+        { artist: 'Robin S', title: 'Show Me Love', year: '1993', tag: 'Start here', kind: 'track', url: 'https://open.spotify.com/track/0WDEYfIBmPRVvKH3xrEK19', why: 'First released in 1990, the StoneBridge remix became a worldwide club hit in 1993 and is still a dance-floor staple.' },
         { artist: 'Carl Cox', title: 'F.A.C.T.', year: '1995', kind: 'album', url: null, heldUrl: 'https://open.spotify.com/album/5xRLo321YU8tAN9QaMdWEU', heldReason: 'The Spotify compilation page loads, but none of its 27 tracks play in the U.S. (checked Nov 15, 2026).', why: 'A mid-’90s Carl Cox mix from the rave-to-global-club years.' },
       ],
       playlistUrl: null,
@@ -259,21 +285,27 @@ export default {
       ],
       image: {
         // Internal rights tracking — stripped from every build.
-        rights: { web: 'pending — Patrick Neree (2014)', exhibition: 'pending — Patrick Neree' },
-        status: 'pending',
-        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
-        reviewSrc: '/img/evolution-review/07-clue-flex.webp',
+        rights: { web: 'cleared — CC BY 2.0, Dom Brady via Wikimedia Commons (taken during the era)', exhibition: 'pending — Patrick Neree' },
+        status: 'published',
+        src: '/img/evolution/07-dj-drama-2008-800.webp',
         width: 800,
-        height: 552,
-        alt: 'Side-by-side photos: DJ Clue in a New York Yankees cap, and Funkmaster Flex in headphones at the turntables.',
-        wallCredit: 'DJ Clue and Funkmaster Flex at the 2014 Flavor Battle. Photo by Patrick Neree.',
-        wallNote: 'The photo on the wall is from 2014, a later image of two DJs who helped define this era.',
-        sourceUrl: 'https://www.vice.com/en/article/funkmaster-flex-dj-clue-hot97-power105-dj-battle-rivalry/',
+        height: 600,
+        alt: 'Close-up portrait of DJ Drama in a black and red baseball cap, looking into the camera.',
+        credit: 'DJ Drama, April 25, 2008. Photo by Dom Brady. CC BY 2.0.',
+        laterNote: null,
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:DJ_Drama.jpg',
+        // The framed print on the wall is a different photo.
+        wall: {
+          credit: 'DJ Clue and Funkmaster Flex at the 2014 Flavor Battle. Photo by Patrick Neree.',
+          note: 'The wall shows a different photo: DJ Clue and Funkmaster Flex at the 2014 Flavor Battle, a later image of two DJs who helped define this era. Web permission has not been granted, so the site shows DJ Drama in 2008.',
+          sourceUrl: 'https://www.vice.com/en/article/funkmaster-flex-dj-clue-hot97-power105-dj-battle-rivalry/',
+        },
       },
       listening: [
         { artist: 'DJ Clue', title: 'The Professional', year: '1998', kind: 'album', url: 'https://open.spotify.com/album/7CcAkgGMwqQ0x9F9D4RwwL', why: 'The street mixtape, released as a major-label album.' },
         { artist: 'Lil Wayne & DJ Drama', title: 'Dedication 2', year: '2006', kind: 'album', url: null, heldReason: 'No authorized full release confirmed; the Spotify listings found play only 1 of 25 tracks.', why: 'A Gangsta Grillz tape that became one of the most celebrated of its era.' },
         { artist: 'DJ Khaled', title: 'We Takin’ Over', year: '2007', kind: 'track', url: 'https://open.spotify.com/track/6BJodnFEjmRr0jzneHcWXO', why: 'The DJ as convener: a single built around a lineup of guest rappers and singers.' },
+        { artist: 'DJ Khaled', title: 'All I Do Is Win', year: '2010', tag: '2010 follow-on', kind: 'track', url: 'https://open.spotify.com/track/12PNcnMsjsZ3eHm62t8hiy', why: 'Khaled’s collaborative-single format at full scale, with T-Pain, Ludacris, Snoop Dogg and Rick Ross.' },
       ],
       playlistUrl: null,
       sources: [
@@ -296,20 +328,26 @@ export default {
       ],
       image: {
         // Internal rights tracking — stripped from every build.
-        rights: { web: 'pending — Daniel Ramos (@spiribolt); no DJ AM photo yet', exhibition: 'pending — Daniel Ramos' },
-        status: 'pending',
-        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
-        reviewSrc: '/img/evolution-review/08-joe-kay.webp',
+        rights: { web: 'cleared — CC BY 3.0, Skyler Greene via Wikimedia Commons (taken during the era)', exhibition: 'pending — Daniel Ramos' },
+        status: 'published',
+        src: '/img/evolution/08-dj-am-2009-800.webp',
         width: 800,
-        height: 534,
-        alt: 'Joe Kay in a dark jacket, standing in front of a glowing orange circle on a dark background.',
-        wallCredit: 'Joe Kay. Photo by Daniel Ramos (@spiribolt).',
-        wallNote: 'The portrait on the wall is a later photo of Joe Kay.',
-        sourceUrl: 'https://www.miaminewtimes.com/music/joe-kay-celebrates-15-years-of-soulection-at-miamis-club-space-40517731/',
+        height: 1092,
+        alt: 'DJ AM standing backstage in front of metal staging, wearing a dark jacket over a graphic T-shirt.',
+        credit: 'DJ AM (Adam Goldstein), June 6, 2009. Photo by Skyler Greene. CC BY 3.0.',
+        laterNote: null,
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:AdamGoldsteinJun09.jpg',
+        // The framed print on the wall is a different photo.
+        wall: {
+          credit: 'Joe Kay. Photo by Daniel Ramos (@spiribolt).',
+          note: 'The wall shows a different photo: a later portrait of Soulection’s Joe Kay by Daniel Ramos. Web permission has not been granted, so the site shows DJ AM in 2009.',
+          sourceUrl: 'https://www.miaminewtimes.com/music/joe-kay-celebrates-15-years-of-soulection-at-miamis-club-space-40517731/',
+        },
       },
       listening: [
         { artist: 'DJ AM', title: 'An archival DJ AM set', year: '2000s', kind: 'set', url: null, heldReason: 'No authorized archival recording confirmed yet.', why: 'Hear the genre-switching for yourself once an authorized recording is confirmed.' },
         { artist: 'Soulection', title: 'Soulection Radio', year: '2011–', kind: 'radio', linkLabel: 'Explore Soulection Radio', url: 'https://radio.soulection.com/', why: 'The show that grew from a college radio slot into a label and community.' },
+        { artist: 'Joe Kay, Cruza & Isaiah Falls', title: 'Slow It Down', year: '2025', tag: 'Later example', kind: 'track', url: 'https://open.spotify.com/track/3vhAZ2Qzdt2NPQ45ALdRC9', why: 'A recent release that shows the Soulection sound Joe Kay built on air.' },
       ],
       playlistUrl: null,
       sources: [
@@ -332,18 +370,24 @@ export default {
       ],
       image: {
         // Internal rights tracking — stripped from every build.
-        rights: { web: 'pending — divisuals (Coachella 2023)', exhibition: 'pending — divisuals' },
-        status: 'pending',
-        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
-        reviewSrc: '/img/evolution-review/09-uncle-waffles.webp',
-        width: 800,
-        height: 533,
-        alt: 'Uncle Waffles dancing behind the DJ decks under bright, colorful stage lights, with people around her at Do LaB.',
-        wallCredit: 'Uncle Waffles at Do LaB, Coachella 2023. Photo by divisuals.',
-        wallNote: 'The photo on the wall is from her 2023 Coachella set.',
-        sourceUrl: 'https://floodmagazine.com/131434/live-in-photos-do-lab-at-coachella-2023-ft-odesza-james-blake-and-more/',
+        rights: { web: 'cleared — CC0, DeepBluuue via Wikimedia Commons', exhibition: 'pending — divisuals' },
+        status: 'published',
+        src: '/img/evolution/09-black-coffee-2018-720.webp',
+        width: 720,
+        height: 946,
+        alt: 'Black Coffee in a white T-shirt with one arm raised behind the decks at Hï Ibiza, under blue and white club lights.',
+        credit: 'Black Coffee at Hï Ibiza, June 2018. Photo by DeepBluuue. CC0 (public domain).',
+        laterNote: 'Taken in 2018, just before this era.',
+        sourceUrl: 'https://commons.wikimedia.org/wiki/File:Black_Coffee_perfoming_at_H%C3%AF_Ibiza_in_June_2018.jpg',
+        // The framed print on the wall is a different photo.
+        wall: {
+          credit: 'Uncle Waffles at Do LaB, Coachella 2023. Photo by divisuals.',
+          note: 'The wall shows a different photo: Uncle Waffles at Do LaB during Coachella 2023. Web permission has not been granted, so the site shows Black Coffee instead.',
+          sourceUrl: 'https://floodmagazine.com/131434/live-in-photos-do-lab-at-coachella-2023-ft-odesza-james-blake-and-more/',
+        },
       },
       listening: [
+        { artist: 'Uncle Waffles, Tony Duardo & Justin99', title: 'Yahyuppiyah', year: '2023', tag: 'Start here', kind: 'track', url: 'https://open.spotify.com/track/2qp7rTcFVz67fz88JSnbkU', why: 'An amapiano anthem from 2023, the year she brought the sound to Coachella.' },
         { artist: 'Black Coffee', title: 'Subconsciously', year: '2021', kind: 'album', url: 'https://open.spotify.com/album/50jhbcGdbYE0u2LVph6j3x', why: 'The GRAMMY-winning album.' },
         { artist: 'Uncle Waffles & Tony Duardo feat. Sino Msolo & BoiBizza', title: 'Tanzania', year: '2022', kind: 'track', url: 'https://open.spotify.com/track/4qm0rzVQA3kqQ0yA7LkuFK', why: 'The debut single that followed her viral Soweto set.' },
       ],
