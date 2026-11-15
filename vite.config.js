@@ -29,7 +29,9 @@ function contentPlugin() {
         const mod = await import(`${pathToFileURL(file).href}?t=${Date.now()}`);
         out[name] = filterDrafts(mod.default, showDrafts);
         // Photos still waiting on permission never reach the public site.
-        if (name === 'evolution' && process.env.VITE_SHOW_PENDING_IMAGES !== '1') {
+        // The evolution-review branch (private review link) shows them, tagged.
+        const reviewBuild = process.env.VITE_SHOW_PENDING_IMAGES === '1' || process.env.VERCEL_GIT_COMMIT_REF === 'evolution-review';
+        if (name === 'evolution' && !reviewBuild) {
           out[name].eras.forEach((e) => { if (e.image) delete e.image.reviewSrc; });
         }
       }
