@@ -29,8 +29,13 @@ function contentPlugin() {
         const mod = await import(`${pathToFileURL(file).href}?t=${Date.now()}`);
         out[name] = filterDrafts(mod.default, showDrafts);
         // Photos still waiting on permission never reach the public site.
-        if (name === 'evolution' && process.env.VITE_SHOW_PENDING_IMAGES !== '1') {
-          out[name].eras.forEach((e) => { if (e.image) delete e.image.reviewSrc; });
+        if (name === 'evolution') {
+          out[name].eras.forEach((e) => {
+            // Internal rights notes and held links never reach the browser.
+            if (e.image) delete e.image.rights;
+            (e.listening || []).forEach((l) => { delete l.heldUrl; delete l.heldReason; });
+            if (e.image && process.env.VITE_SHOW_PENDING_IMAGES !== '1') delete e.image.reviewSrc;
+          });
         }
       }
       out.showingDrafts = showDrafts;

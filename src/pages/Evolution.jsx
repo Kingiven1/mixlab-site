@@ -195,6 +195,13 @@ function EraImage({ era, eager }) {
   );
 }
 
+// Spotify is the main platform: tracks "Listen", albums and compilations "Open".
+// Anything else is labelled by its real destination (linkLabel in the content).
+function linkLabel(l) {
+  if (l.linkLabel) return l.linkLabel;
+  return l.kind === 'album' ? 'Open on Spotify' : 'Listen on Spotify';
+}
+
 function Listening({ era }) {
   if (!era.listening?.length && !era.playlistUrl) return null;
   return (
@@ -210,9 +217,9 @@ function Listening({ era }) {
               <p style={{ ...body, fontSize: '15px', marginTop: '4px' }}>{l.why}</p>
             </div>
             {l.url && (
-              <a href={l.url} target="_blank" rel="noopener noreferrer" className="ml-btn ml-ghost" aria-label={`Listen to ${l.title} by ${l.artist} (opens in a new tab)`}
-                style={{ ...buttonGhost, minHeight: '44px', padding: '0 16px', fontSize: '16px' }}>
-                Listen<span aria-hidden="true">↗</span>
+              <a href={l.url} target="_blank" rel="noopener noreferrer" className="ml-btn ml-ghost" aria-label={`${linkLabel(l)}: ${l.title} by ${l.artist} (opens in a new tab)`}
+                style={{ ...buttonGhost, minHeight: '44px', padding: '0 16px', fontSize: '16px', whiteSpace: 'normal', textAlign: 'center' }}>
+                {linkLabel(l)}<span aria-hidden="true">↗</span>
               </a>
             )}
           </li>
@@ -220,10 +227,31 @@ function Listening({ era }) {
       </ul>
       {era.playlistUrl && (
         <a href={era.playlistUrl} target="_blank" rel="noopener noreferrer" className="ml-btn" style={{ ...buttonPrimary, marginTop: '14px', minHeight: '48px' }}>
-          Open the {era.dates} playlist<span aria-hidden="true">↗</span>
+          Listen to the era playlist<span aria-hidden="true">↗</span>
         </a>
       )}
     </div>
+  );
+}
+
+function goToEra(ev, id) {
+  ev.preventDefault();
+  window.history.replaceState(null, '', `#${id}`);
+  scrollToEra(id, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth');
+  document.getElementById(`${id}-h`)?.focus({ preventScroll: true });
+}
+
+// Previous / next era links at the end of each section.
+function EraStep({ era }) {
+  const i = eras.findIndex((e) => e.anchor === era.anchor);
+  const prev = eras[i - 1];
+  const next = eras[i + 1];
+  const link = { ...body, fontSize: '15px', color: color.cream, fontWeight: 600, display: 'inline-flex', alignItems: 'center', minHeight: '44px' };
+  return (
+    <nav aria-label={`Era ${era.n} navigation`} style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+      {prev && <a href={`#${prev.anchor}`} onClick={(ev) => goToEra(ev, prev.anchor)} className="ml-link" style={link}>← {prev.n} {prev.dates}</a>}
+      {next && <a href={`#${next.anchor}`} onClick={(ev) => goToEra(ev, next.anchor)} className="ml-link" style={link}>{next.n} {next.dates} →</a>}
+    </nav>
   );
 }
 
@@ -258,8 +286,9 @@ function Era({ era, isTarget }) {
                 ))}
               </ul>
             </div>
-            <div style={{ marginTop: '20px' }}>
+            <div style={{ marginTop: '20px', display: 'flex', flexWrap: 'wrap', gap: '10px 16px', alignItems: 'center' }}>
               <ShareButton anchor={era.anchor} label="Share this era" title={`${era.title} (${era.dates}) — ${evolution.title}`} />
+              <EraStep era={era} />
             </div>
           </div>
         </div>
