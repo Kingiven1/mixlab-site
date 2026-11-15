@@ -162,17 +162,24 @@ function VenueBlock() {
   const v = event.venue;
   return (
     <div>
-      <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '10px' }}>
-        <img src={asset(v.photos[0])} alt="The LAB Miami event room with rows of chairs facing a screen" loading="lazy" style={{ width: '100%', height: '100%', aspectRatio: '4 / 3', objectFit: 'cover', borderRadius: radius.md, gridRow: 'span 2' }} />
-        <img src={asset(v.photos[1])} alt="The LAB Miami lounge with armchairs" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: radius.md }} />
-        <img src={asset(v.photos[2])} alt="The LAB Miami workspace with long tables and a mural" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: radius.md }} />
-      </div>
-      <p style={{ ...small, marginTop: '8px' }}>{v.photoNote}</p>
-      <h3 style={{ ...h3, marginTop: '24px' }}>{v.name}</h3>
+      {v.photos?.length >= 3 && (
+        <>
+          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '10px' }}>
+            <img src={asset(v.photos[0])} alt={`${v.name} event room`} loading="lazy" style={{ width: '100%', height: '100%', aspectRatio: '4 / 3', objectFit: 'cover', borderRadius: radius.md, gridRow: 'span 2' }} />
+            <img src={asset(v.photos[1])} alt={`${v.name} lounge`} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: radius.md }} />
+            <img src={asset(v.photos[2])} alt={`${v.name} workspace`} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: radius.md }} />
+          </div>
+          {v.photoNote && <p style={{ ...small, marginTop: '8px' }}>{v.photoNote}</p>}
+        </>
+      )}
+      <h3 style={{ ...h3, marginTop: v.photos?.length ? '24px' : 0 }}>{v.name}</h3>
       <p style={{ ...body, marginTop: '6px' }}>{v.address || v.neighborhood}</p>
-      <a href={v.mapUrl} target="_blank" rel="noopener noreferrer" className="ml-btn ml-ghost" style={{ ...buttonGhost, marginTop: '16px' }}>
-        Directions ↗
-      </a>
+      {!v.address && v.addressNote && <p style={{ ...body, marginTop: '6px', color: color.cream }}>{v.addressNote}</p>}
+      {v.address && v.mapUrl && (
+        <a href={v.mapUrl} target="_blank" rel="noopener noreferrer" className="ml-btn ml-ghost" style={{ ...buttonGhost, marginTop: '16px' }}>
+          Directions ↗
+        </a>
+      )}
       <dl style={{ margin: '24px 0 0', display: 'grid', gap: '14px' }}>
         <InfoRow k="Date" v={event.dateLabel} />
         <InfoRow k="Hours" v={event.hoursLabel || 'Final hours announced soon (Eastern Time)'} />

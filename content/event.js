@@ -26,13 +26,16 @@ export default {
     neighborhood: 'Wynwood, Miami',
     // Street address: fill in once reconfirmed with the venue. While null,
     // the site shows the venue name + neighborhood only.
-    address: '400 NW 26th St, Miami, FL 33127',
+    // PRIVATE: the street address goes only to confirmed guests (via Luma).
+    // Keep null on the public site.
+    address: null,
+    addressNote: 'The exact address is shared with confirmed guests.',
     // Directions link. While address is null this searches the venue name.
-    mapUrl: 'https://www.google.com/maps/search/?api=1&query=The+LAB+Miami%2C+400+NW+26th+St%2C+Miami%2C+FL+33127',
+    mapUrl: null, // no public directions link while the address is private
     arrival: null, // e.g. 'Check in at the front entrance on NW 26th St.' — only once confirmed
     parking: null,
     transit: null,
-    photos: ['/img/venue-1.webp', '/img/venue-2.webp', '/img/venue-3.webp'],
+    photos: [], // venue photos removed from the public site
     photoNote: 'The venue before event styling.',
   },
 

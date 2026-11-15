@@ -74,8 +74,9 @@ export default function Guide() {
           <div style={{ ...card, padding: '20px' }}>
             <p style={{ fontFamily: font.display, fontWeight: 700, textTransform: 'uppercase', fontSize: '26px', color: color.cream, margin: 0 }}>{event.venue.name}</p>
             <p style={{ ...body, marginTop: '4px' }}>{event.venue.address || event.venue.neighborhood}</p>
+            {!event.venue.address && event.venue.addressNote && <p style={{ ...body, marginTop: '6px', color: color.cream }}>{event.venue.addressNote}</p>}
             {event.venue.arrival && <p style={{ ...body, marginTop: '10px', color: color.cream }}>{event.venue.arrival}</p>}
-            <a href={event.venue.mapUrl} target="_blank" rel="noopener noreferrer" className="ml-btn ml-ghost" style={{ ...buttonGhost, marginTop: '16px' }}>Directions ↗</a>
+            {event.venue.address && event.venue.mapUrl && <a href={event.venue.mapUrl} target="_blank" rel="noopener noreferrer" className="ml-btn ml-ghost" style={{ ...buttonGhost, marginTop: '16px' }}>Directions ↗</a>}
           </div>
           <div style={{ marginTop: '20px' }}><FAQList /></div>
         </section>
