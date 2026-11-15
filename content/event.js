@@ -41,7 +41,7 @@ export default {
   // invitation" and goes to Luma. While null, buttons say "Get updates" and the
   // updates form is clearly labelled as NOT an invitation request.
   registrationUrl: 'https://luma.com/2sd53ba8',
-  registrationLabel: 'Request an invitation',
+  registrationLabel: 'RSVP Here',
 
   // Flyer. Put the approved file in /public/img/ and set the path, e.g.
   // '/img/mix-lab-flyer.jpg'. While null the flyer section is hidden entirely
