@@ -3,7 +3,7 @@ import Logo from '../components/Logo';
 import RegisterButton from '../components/RegisterButton';
 import PartnerDirectory from '../components/PartnerDirectory';
 import { TalentGrid, ScheduleList, ProvisionalNote, FAQList } from '../components/Blocks';
-import { event } from '../lib/content';
+import { event, evolution } from '../lib/content';
 import { color, font, container, eyebrow, h2, body, small, buttonGhost, card } from '../styles/tokens';
 
 // The guest-facing guide behind the permanent QR code. Lightweight, no account,
@@ -83,6 +83,7 @@ export default function Guide() {
         <section id="links" aria-labelledby="links-h" style={{ ...block, paddingBottom: '72px' }}>
           <H id="links">Guest links</H>
           <div style={{ display: 'grid', gap: '10px' }}>
+            <GuideLink href={evolution.path} label={evolution.title} sub="The photo-wall exhibit: nine eras, sources and listening" />
             <GuideLink href={`mailto:${event.contactEmail}`} label="Contact the team" sub={event.contactEmail} />
             <GuideLink href={event.instagram} label="Instagram" sub="@globallynk" external />
             <GuideLink href="https://www.globallynk.club" label="GlobalLYNK DJ workshops & cohorts" sub="Keep learning after The Mix Lab" external />
