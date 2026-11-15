@@ -28,6 +28,10 @@ function contentPlugin() {
         this.addWatchFile(file);
         const mod = await import(`${pathToFileURL(file).href}?t=${Date.now()}`);
         out[name] = filterDrafts(mod.default, showDrafts);
+        // Photos still waiting on permission never reach the public site.
+        if (name === 'evolution' && process.env.VITE_SHOW_PENDING_IMAGES !== '1') {
+          out[name].eras.forEach((e) => { if (e.image) delete e.image.reviewSrc; });
+        }
       }
       out.showingDrafts = showDrafts;
       return `export default ${JSON.stringify(out)};`;
