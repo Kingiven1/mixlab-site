@@ -8,6 +8,7 @@ inline styles from one tokens file, Supabase (shared project), Vercel.
 | Experience | `/` | Splash page: hero, flyer, about, what to expect, lineup, schedule preview, essential info, register + recognition |
 | Partners | `/partners` | Community Partner listings ($500 / $1,000), sponsorships, the guide, application + inquiry links |
 | Digital Experience Guide | `/guide` | Permanent QR destination: schedule, talent, partner directory, venue, guest links. No account. |
+| The Evolution of DJing | `/evolution-of-djing` | Photo-wall exhibit. Nine eras, each with a permanent `#anchor` that its wall QR code points to. Not in the nav until placement is decided. |
 
 ## Run locally
 ```
@@ -31,6 +32,7 @@ No new paid services.
 | `content/partners.js` | a Community Partner reaches **Published** in `globallynk.club/admin/partners` |
 | `content/sponsors.js` | a sponsor is approved; set `tiers.publishDetails: true` to show sponsor pricing |
 | `content/faq.js` | cost / admission / age / accessibility answers are verified |
+| `content/evolution.js` | an exhibit photo is cleared (`status: 'published'`), a Spotify playlist exists (`playlistUrl`), or a listening link is confirmed. **Never rename an `anchor`** — it's printed in a QR code. |
 
 Images go in `public/img/`. Drafts are stripped at build time — they never reach
 the browser, so it's safe to keep pending names and partners in these files.

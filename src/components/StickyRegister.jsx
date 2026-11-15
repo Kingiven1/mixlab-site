@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import RegisterButton from './RegisterButton';
-import { event } from '../lib/content';
+import { event, evolution } from '../lib/content';
 import { color, font } from '../styles/tokens';
 
 // Phone-only bottom bar. The body gets matching bottom padding (index.css) so
@@ -11,7 +11,11 @@ export default function StickyRegister() {
   const [hidden, setHidden] = useState(false);
   const { pathname } = useLocation();
 
+  // Off on the photo-wall exhibit: visitors are already at the event.
+  const off = pathname === evolution.path;
+
   useEffect(() => {
+    if (off) { document.body.classList.remove('has-sticky'); return; }
     document.body.classList.add('has-sticky');
     const targets = ['register', 'site-footer'].map((id) => document.getElementById(id)).filter(Boolean);
     if (!targets.length || !('IntersectionObserver' in window)) return;
@@ -22,8 +26,9 @@ export default function StickyRegister() {
     }, { threshold: 0.05 });
     targets.forEach((t) => io.observe(t));
     return () => { io.disconnect(); setHidden(false); };
-  }, [pathname]);
+  }, [pathname, off]);
 
+  if (off) return null;
   return (
     <div
       className="ml-mobile-only"
