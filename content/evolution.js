@@ -47,6 +47,11 @@ export default {
       ],
       image: {
         status: 'pending',
+        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
+        reviewSrc: '/img/evolution-review/01-tenor-saw.webp',
+        width: 800,
+        height: 597,
+        alt: 'Two black-and-white frames from a sound-system dance: young men crowd around a turntable while a selector handles a record and another man speaks into a microphone.',
         wallCredit: 'Tenor Saw. Photo by Wayne Tippetts.',
         wallNote: 'The photo on the wall shows singer and deejay Tenor Saw on the mic at the Youthman Promotion sound system in Kingston in 1986, decades after this era. It shows the culture the early systems built.',
         sourceUrl: 'https://waynetippetts.com/content/the-late-singer-and-deejay-tenor-saw-died-in1988-on-the-mic-youthman-promotion-sound-system-kingston-jamaica-1987/lightbox/',
@@ -107,6 +112,11 @@ export default {
       ],
       image: {
         status: 'pending',
+        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
+        reviewSrc: '/img/evolution-review/03-theodore-turntables.webp',
+        width: 800,
+        height: 450,
+        alt: 'Two silver turntables on a wooden surface in a Smithsonian Anthology of Hip-Hop and Rap image labeled “Turntable used by Grand Wizzard Theodore.”',
         wallCredit: 'Later-career turntables used by Grand Wizzard Theodore. Smithsonian National Museum of African American History and Culture, Gift of Grand Wizzard Theodore.',
         wallNote: 'The photo on the wall shows Theodore’s later-career turntables.',
         sourceUrl: 'https://music.si.edu/node/1314',
@@ -135,6 +145,11 @@ export default {
       ],
       image: {
         status: 'pending',
+        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
+        reviewSrc: '/img/evolution-review/04-detroit-techno.webp',
+        width: 800,
+        height: 671,
+        alt: 'Four video stills of men talking during an interview, from the Detroit Historical Society archive.',
         wallCredit: 'Detroit techno pioneers in conversation. Archival still courtesy Detroit Historical Society.',
         wallNote: 'The still on the wall comes from a Detroit Historical Society look back at the 2002 Detroit Electronic Music Festival, a later image of the pioneers.',
         sourceUrl: 'https://www.detroithistorical.org/learn/online-research/blog/flashback-2002-detroit-electronic-music-festival',
@@ -164,6 +179,11 @@ export default {
       ],
       image: {
         status: 'pending',
+        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
+        reviewSrc: '/img/evolution-review/05-salt-n-pepa.webp',
+        width: 800,
+        height: 597,
+        alt: 'Black-and-white photo of three women laughing and singing together in a recording studio, with a microphone hanging above them.',
         wallCredit: 'Salt-N-Pepa with Spinderella outside Bayside Studios. Photo by Al Pereira.',
         wallNote: 'The photo on the wall was taken on February 6, 1989, and is held by the Smithsonian’s National Museum of African American History and Culture. Photo © Al Pereira.',
         sourceUrl: 'https://nmaahc.si.edu/object/nmaahc_2015.132.311',
@@ -193,6 +213,11 @@ export default {
       ],
       image: {
         status: 'pending',
+        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
+        reviewSrc: '/img/evolution-review/06-flesh-hacienda.webp',
+        width: 800,
+        height: 1102,
+        alt: 'A 1992 magazine spread of numbered snapshots from Flesh at the Haçienda: dressed-up clubgoers posing alone, in pairs and in groups.',
         wallCredit: 'Flesh at the Haçienda, September 1992. Photo by Paul Jones, via Manchester Digital Music Archive.',
         wallNote: 'The wall shows a 1992 press spread from Flesh; DJ Paulette is in frame 10.',
         sourceUrl: 'https://www.mdmarchive.co.uk/artefact/16471/Kath-McDermott-Tim-Lennox-DJ-Paulette-Coco--Angel-The-Hacienda-Press-1992',
@@ -221,6 +246,11 @@ export default {
       ],
       image: {
         status: 'pending',
+        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
+        reviewSrc: '/img/evolution-review/07-clue-flex.webp',
+        width: 800,
+        height: 552,
+        alt: 'Side-by-side photos: DJ Clue in a New York Yankees cap, and Funkmaster Flex in headphones at the turntables.',
         wallCredit: 'DJ Clue and Funkmaster Flex at the 2014 Flavor Battle. Photo by Patrick Neree.',
         wallNote: 'The photo on the wall is from 2014, a later image of two DJs who helped define this era.',
         sourceUrl: 'https://www.vice.com/en/article/funkmaster-flex-dj-clue-hot97-power105-dj-battle-rivalry/',
@@ -251,6 +281,11 @@ export default {
       ],
       image: {
         status: 'pending',
+        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
+        reviewSrc: '/img/evolution-review/08-joe-kay.webp',
+        width: 800,
+        height: 534,
+        alt: 'Joe Kay in a dark jacket, standing in front of a glowing orange circle on a dark background.',
         wallCredit: 'Joe Kay. Photo by Daniel Ramos (@spiribolt).',
         wallNote: 'The portrait on the wall is a later photo of Joe Kay.',
         sourceUrl: 'https://www.miaminewtimes.com/music/joe-kay-celebrates-15-years-of-soulection-at-miamis-club-space-40517731/',
@@ -280,6 +315,11 @@ export default {
       ],
       image: {
         status: 'pending',
+        // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
+        reviewSrc: '/img/evolution-review/09-uncle-waffles.webp',
+        width: 800,
+        height: 533,
+        alt: 'Uncle Waffles dancing behind the DJ decks under bright, colorful stage lights, with people around her at Do LaB.',
         wallCredit: 'Uncle Waffles at Do LaB, Coachella 2023. Photo by divisuals.',
         wallNote: 'The photo on the wall is from her 2023 Coachella set.',
         sourceUrl: 'https://floodmagazine.com/131434/live-in-photos-do-lab-at-coachella-2023-ft-odesza-james-blake-and-more/',

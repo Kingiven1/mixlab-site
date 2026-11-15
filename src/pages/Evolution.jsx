@@ -160,6 +160,26 @@ function EraImage({ era, eager }) {
       </figure>
     );
   }
+  // Review build only: photos still waiting on permission, clearly tagged.
+  if (img && img.reviewSrc) {
+    return (
+      <figure style={{ margin: 0 }}>
+        <div style={{ position: 'relative' }}>
+          <img src={asset(img.reviewSrc)} width={img.width} height={img.height} alt={img.alt}
+            loading={eager ? 'eager' : 'lazy'} decoding="async"
+            style={{ width: '100%', height: 'auto', aspectRatio: `${img.width} / ${img.height}`, objectFit: 'cover', borderRadius: radius.md, background: color.surface }} />
+          <span style={{ position: 'absolute', top: '10px', left: '10px', background: color.coral, color: color.bgDeep, fontWeight: 700, fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', padding: '5px 10px', borderRadius: radius.pill }}>
+            Review only · permission pending
+          </span>
+        </div>
+        <figcaption style={{ ...small, marginTop: '10px', color: color.creamSoft, lineHeight: 1.5 }}>
+          {img.wallCredit}
+          {img.wallNote && <><br />{img.wallNote}</>}
+          {img.sourceUrl && <>{' '}<a href={img.sourceUrl} target="_blank" rel="noopener noreferrer" className="ml-link" style={{ color: color.cream }}>Photo source<span aria-hidden="true"> ↗</span></a></>}
+        </figcaption>
+      </figure>
+    );
+  }
   // Text-led panel: the photo is on the wall, not on the web (yet).
   return (
     <aside aria-label="About the photo on the wall" style={{ ...card, padding: 'clamp(20px, 4vw, 28px)', borderColor: color.lineCoral }}>
