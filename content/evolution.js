@@ -116,13 +116,13 @@ export default {
       ],
       image: {
         // Internal rights tracking — stripped from every build.
-        rights: { web: 'cleared — Smithsonian CC0, clean object photo (nmaahc_2015.142a-g)', exhibition: 'CHANGE NEEDED — wall print uses the branded reference; reprint from the clean CC0 high-res JPEG on the object page' },
+        rights: { web: 'cleared — Smithsonian CC0, clean object photo (nmaahc_2015.142a-g)', exhibition: 'cleared — CC0; revised photo PDF page 3 uses the clean 3600px Smithsonian file' },
         status: 'published',
         src: '/img/evolution/03-theodore-turntables-smithsonian-640.webp',
         width: 640,
         height: 469,
         alt: 'A pair of silver Vestax turntables with black slipmats, photographed under a spotlight on a wooden surface.',
-        credit: 'Turntables used by Grand Wizzard Theodore (Vestax PDX-2000). Smithsonian National Museum of African American History and Culture. CC0.',
+        credit: 'Turntables used by Grand Wizzard Theodore (Vestax PDX-2000), later-career decks from the 2000s. Smithsonian National Museum of African American History and Culture. CC0.',
         laterNote: 'Later-career decks from the 2000s, not the turntables he used in the 1970s.',
         sourceUrl: 'https://www.si.edu/object/turntable-used-grand-wizzard-theodore:nmaahc_2015.142a-g',
         // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
@@ -188,16 +188,16 @@ export default {
       ],
       image: {
         // Internal rights tracking — stripped from every build.
-        rights: { web: 'pending — © Al Pereira; Smithsonian record says permission required', exhibition: "pending — © Al Pereira; also confirm the caption (photo shows a studio interior, record says 'outside Bayside Studios')" },
+        rights: { web: 'pending — © Al Pereira; Smithsonian record says permission required', exhibition: 'pending — © Al Pereira (Smithsonian: permission required). Caption fixed: the saved photo is NMAAHC 2015.132.310, recording inside Bayside Studios, Queens, Feb 6 1989' },
         status: 'pending',
         // Review build only (VITE_SHOW_PENDING_IMAGES=1). Stripped from the public site.
         reviewSrc: '/img/evolution-review/05-salt-n-pepa.webp',
         width: 800,
         height: 597,
         alt: 'Black-and-white photo of three women laughing and singing together in a recording studio, with a microphone hanging above them.',
-        wallCredit: 'Salt-N-Pepa with Spinderella outside Bayside Studios. Photo by Al Pereira.',
-        wallNote: 'The photo on the wall was taken on February 6, 1989, and is held by the Smithsonian’s National Museum of African American History and Culture. Photo © Al Pereira.',
-        sourceUrl: 'https://nmaahc.si.edu/object/nmaahc_2015.132.311',
+        wallCredit: 'Salt-N-Pepa with DJ Spinderella at Bayside Studios. Photo by Al Pereira.',
+        wallNote: 'The photo on the wall shows the group recording at Bayside Studios in Queens on February 6, 1989. The print is held by the Smithsonian’s National Museum of African American History and Culture. Photo © Al Pereira.',
+        sourceUrl: 'https://www.si.edu/object/nmaahc_2015.132.310',
       },
       listening: [
         { artist: 'DJ Jazzy Jeff & The Fresh Prince', title: 'Summertime', year: '1991', kind: 'track', url: 'https://open.spotify.com/track/0Ah7XjkHDO5aOzfxNqd31S', why: 'The DJ-and-rapper duo at full pop reach.' },
