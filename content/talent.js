@@ -39,6 +39,16 @@ export default [
     link: null,
   },
   {
+    status: 'published',
+    name: 'Ryan Rose',
+    role: 'DJ',
+    city: 'Tampa',
+    bio: 'DJ and founder of How a Sunset Sounds.',
+    photo: '/img/talent-ryan-rose.webp',
+    photoPosition: 'center 45%',
+    link: null,
+  },
+  {
     status: 'draft', // held until Iven confirms
     name: 'DJ Aktive',
     role: 'DJ',
