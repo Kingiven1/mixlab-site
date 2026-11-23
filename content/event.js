@@ -46,6 +46,13 @@ export default {
   registrationUrl: 'https://luma.com/2sd53ba8',
   registrationLabel: 'RSVP Here',
 
+  // WORKSHOP BOOKING — one button directly below the homepage hero.
+  // DJs and sessions are managed on the Luma page itself; the site never lists
+  // individual DJ booking cards or session buttons. Set workshopUrl to null to hide.
+  workshopUrl: 'https://luma.com/2sd53ba8',
+  workshopLabel: 'Book a workshop spot',
+  workshopNote: 'Choose your DJ on the next page. Only 8 spots per workshop. Approval required.',
+
   // Flyer. Put the approved file in /public/img/ and set the path, e.g.
   // '/img/mix-lab-flyer.jpg'. While null the flyer section is hidden entirely
   // (date, location and attendance info stay as text elsewhere on the page).

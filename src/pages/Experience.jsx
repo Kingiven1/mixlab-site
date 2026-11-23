@@ -5,7 +5,7 @@ import UpdatesForm from '../components/UpdatesForm';
 import Flyer from '../components/Flyer';
 import { SectionHead, TalentGrid, ScheduleList, ProvisionalNote, FAQList, TextLink } from '../components/Blocks';
 import { event, sponsors, hasRegistration, asset } from '../lib/content';
-import { color, font, container, section, eyebrow, h1, h3, body, bodyLg, small, buttonGhost, radius, card } from '../styles/tokens';
+import { color, font, container, section, eyebrow, h1, h3, body, bodyLg, small, buttonGhost, buttonPrimary, radius, card } from '../styles/tokens';
 
 // Planned activities — short and inviting. Treated as planned until confirmed.
 const EXPECT = [
@@ -108,6 +108,25 @@ export default function Experience() {
   );
 }
 
+// One prominent workshop button directly below the hero. DJs and sessions live
+// on the Luma page — no per-DJ cards or session buttons on the site.
+function WorkshopCTA() {
+  if (!event.workshopUrl) return null;
+  return (
+    <section id="workshops" aria-label="Workshop booking" style={{ background: color.surface, borderTop: `1px solid ${color.lineCoral}`, borderBottom: `1px solid ${color.lineCoral}` }}>
+      <div style={{ ...container, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 'clamp(28px, 5vw, 44px) clamp(16px, 4vw, 40px)' }}>
+        <a href={event.workshopUrl} target="_blank" rel="noopener noreferrer" className="ml-btn"
+          style={{ ...buttonPrimary, width: '100%', maxWidth: '460px', minHeight: '64px', fontSize: 'clamp(21px, 5.6vw, 26px)', padding: '0 28px', whiteSpace: 'normal', textAlign: 'center', lineHeight: 1.05 }}>
+          {event.workshopLabel}<span aria-hidden="true">↗</span>
+        </a>
+        <p style={{ ...body, color: color.cream, fontSize: 'clamp(15px, 3.8vw, 17px)', maxWidth: '460px', marginTop: '14px' }}>
+          {event.workshopNote}
+        </p>
+      </div>
+    </section>
+  );
+}
+
 function Hero() {
   // Deck-cover treatment: the logo on solid burgundy, nothing behind it.
   // Photos sit in their own strip underneath so neither gets cropped or crowded.
@@ -146,6 +165,8 @@ function Hero() {
           </div>
         </div>
       </section>
+
+      <WorkshopCTA />
 
       {/* Photo strip — whole images, nothing layered on top */}
       <div className="ml-photostrip" style={{ background: color.bgDeep }}>
