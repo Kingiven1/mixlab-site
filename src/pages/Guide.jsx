@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Logo from '../components/Logo';
 import RegisterButton from '../components/RegisterButton';
-import PartnerDirectory from '../components/PartnerDirectory';
+import PartnerList from '../components/PartnerList';
 import { TalentGrid, ScheduleList, ProvisionalNote, FAQList } from '../components/Blocks';
 import { event, evolution } from '../lib/content';
 import { color, font, container, eyebrow, h2, body, small, buttonGhost, card } from '../styles/tokens';
@@ -65,8 +65,8 @@ export default function Guide() {
         </section>
 
         <section id="partners" aria-labelledby="partners-h" style={block}>
-          <H id="partners">Community Partners</H>
-          <PartnerDirectory />
+          <H id="partners">Partners</H>
+          <PartnerList compact />
         </section>
 
         <section id="venue" aria-labelledby="venue-h" style={block}>

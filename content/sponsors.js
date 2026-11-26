@@ -18,6 +18,33 @@ export default {
   ],
   hostVenue: { name: 'The LAB Miami', role: 'A Wynwood innovation community bringing founders, engineers and entrepreneurs into the experience.' },
 
+  // OUR PARTNERS — shown on /partners, the homepage and the guide.
+  // logo: null shows the name as text until the logo file arrives
+  // (drop it in /public/img/partners/ and set the path).
+  partnerGroups: [
+    {
+      label: 'Technology Partner',
+      partners: [
+        { name: 'AlphaTheta', logo: null, copy: 'Technology partner for the hands-on DJ workshops.', link: null },
+      ],
+    },
+    {
+      label: 'Hospitality Partners',
+      partners: [
+        { name: 'NOCA', logo: '/img/partners/noca.webp', logoHeight: 64, copy: 'Hospitality partner for The Mix Lab.', link: null },
+        { name: 'Leisure Hydration', logo: '/img/partners/leisure-hydration.png', logoHeight: 64, copy: 'Keeping guests hydrated through the day.', link: null },
+      ],
+    },
+    {
+      label: 'Supporting Partner',
+      partners: [
+        { name: 'BPM Supreme', logo: '/img/partners/bpm-supreme.png', logoHeight: 30, copy: 'Complimentary BPM Supreme codes for Mix Lab guests.', link: null },
+      ],
+    },
+  ],
+
+  // Legacy: the sponsorship tiers, support areas and community-partner
+  // application below are no longer shown on the site.
   recognized: [
     // { status: 'published', name: 'Brand', logo: '/img/sponsors/brand.png', tier: 'Experience Partner', link: 'https://…' },
   ],

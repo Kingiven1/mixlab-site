@@ -3,6 +3,7 @@ import Logo from '../components/Logo';
 import RegisterButton from '../components/RegisterButton';
 import UpdatesForm from '../components/UpdatesForm';
 import Flyer from '../components/Flyer';
+import PartnerList from '../components/PartnerList';
 import { SectionHead, TalentGrid, ScheduleList, ProvisionalNote, FAQList, TextLink } from '../components/Blocks';
 import { event, sponsors, hasRegistration, asset } from '../lib/content';
 import { color, font, container, section, eyebrow, h1, h3, body, bodyLg, small, buttonGhost, buttonPrimary, radius, card } from '../styles/tokens';
@@ -270,13 +271,11 @@ function RegisterSection() {
           <p style={{ ...body, textAlign: 'center', marginTop: '20px', fontSize: '15px' }}>
             Host venue: <strong style={{ color: color.cream }}>{sponsors.hostVenue.name}</strong>
           </p>
-          {sponsors.recognized.length > 0 && (
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '32px', marginTop: '32px' }}>
-              {sponsors.recognized.map((s) => <img key={s.name} src={asset(s.logo)} alt={s.name} loading="lazy" style={{ height: '44px', width: 'auto' }} />)}
-            </div>
-          )}
+          <div style={{ marginTop: '40px' }}>
+            <PartnerList compact />
+          </div>
           <p style={{ textAlign: 'center', marginTop: '28px' }}>
-            <TextLink to="/partners">Partner with The Mix Lab →</TextLink>
+            <TextLink to="/partners">Meet our partners →</TextLink>
           </p>
         </div>
       </div>
