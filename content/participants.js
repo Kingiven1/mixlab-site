@@ -42,6 +42,7 @@ export default {
         people: [
           { name: 'King Iven' },
           { name: 'Ryan Rose', line: 'Founder, How A Sunset Sounds' },
+          { name: 'DJ Aktive', line: 'Tour DJ · Philadelphia' },
           { name: 'Shameka Johnson', moderator: true },
         ],
       },

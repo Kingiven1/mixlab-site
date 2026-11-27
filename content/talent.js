@@ -105,7 +105,8 @@ export default [
     role: 'Founder, GlobalLYNK',
     city: 'Charlotte',
     bio: 'Charlotte DJ, event producer and founder of GlobalLYNK, home to DJ workshops, cohort classes and cultural exchange programs. He produces The Mix Lab to celebrate DJing as an art form.',
-    photo: null, // photo needed
+    photo: '/img/talent-king-iven.webp',
+    photoPosition: 'center 20%',
   },
   {
     status: 'published',
@@ -174,13 +175,13 @@ export default [
 
   // ── Held until confirmed ─────────────────────────────────────────────────
   {
-    status: 'draft', // provisional in the program PDF — hold until confirmed
+    status: 'published', // confirmed by Iven, Nov 27
     name: 'DJ Aktive',
     role: 'DJ',
     city: 'Philadelphia',
-    bio: "Janet Jackson's official tour DJ.",
-    photo: '/img/talent-dj-aktive.webp',
-    photoPosition: 'center 25%',
+    bio: "West Philadelphia DJ and turntablist who has been Janet Jackson's opening act and tour DJ since 2015. He has also toured with Diddy, Nas, Common, Kanye West and Queen Latifah.",
+    photo: '/img/talent-dj-aktive-2026.webp',
+    photoPosition: 'center 20%',
   },
   {
     status: 'draft', // held until Iven confirms
