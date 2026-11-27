@@ -58,9 +58,9 @@ export default [
   {
     status: 'published',
     name: 'Justin “CoolBlaze” Elliott',
-    role: 'WRTH',
+    role: 'WRTH · Claude Community Ambassador',
     city: 'Miami',
-    bio: 'Miami entrepreneur, technologist and internationally recognized DJ whose career bridges culture and innovation. Through WRTH, he builds technology that changes how people create, connect and exchange value.',
+    bio: 'Miami entrepreneur, technologist, internationally recognized DJ and Claude Community Ambassador whose career bridges culture and innovation. Through WRTH, he builds technology that changes how people create, connect and exchange value.',
     photo: '/img/talent-justin-elliott.webp',
     photoPosition: 'center 25%',
   },
