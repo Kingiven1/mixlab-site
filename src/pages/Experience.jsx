@@ -134,12 +134,6 @@ function WorkshopCTA() {
 function Hero() {
   // Deck-cover treatment: the logo on solid burgundy, nothing behind it.
   // Photos sit in their own strip underneath so neither gets cropped or crowded.
-  const photos = [
-    ['/img/workshop.webp', 'Two people working on DJ decks together at a hands-on workshop', 'center 40%'],
-    ['/img/party-1.webp', 'A DJ smiling behind the decks', 'center 30%'],
-    ['/img/fireside.webp', 'A speaker addressing an audience during a talk', 'center 40%'],
-    ['/img/party-2.webp', 'A DJ mixing on a controller', 'center 30%'],
-  ];
   return (
     <>
       <section style={{ background: color.bgDeep, marginTop: '-72px', paddingTop: '72px' }}>
@@ -172,13 +166,6 @@ function Hero() {
 
       <WorkshopCTA />
 
-      {/* Photo strip — whole images, nothing layered on top */}
-      <div className="ml-photostrip" style={{ background: color.bgDeep }}>
-        {photos.map(([src, alt, pos], i) => (
-          <img key={src} src={asset(src)} alt={alt} fetchpriority={i === 0 ? 'high' : undefined}
-            style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover', objectPosition: pos }} />
-        ))}
-      </div>
     </>
   );
 }
