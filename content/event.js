@@ -51,6 +51,7 @@ export default {
   // individual DJ booking cards or session buttons. Set workshopUrl to null to hide.
   workshopUrl: 'https://luma.com/2sd53ba8',
   workshopLabel: 'Book a workshop spot',
+  workshopDescription: "Each small-group session starts with the DJ's story and how they built their career. Watch and hear their style up close, then step behind the decks yourself.",
   workshopNote: 'Choose your DJ on the next page. Only 8 spots per workshop. Approval required.',
 
   // Flyer. Put the approved file in /public/img/ and set the path, e.g.

@@ -120,6 +120,14 @@ function WorkshopCTA() {
   return (
     <section id="workshops" aria-label="Workshop booking" style={{ background: color.surface, borderTop: `1px solid ${color.lineCoral}`, borderBottom: `1px solid ${color.lineCoral}` }}>
       <div style={{ ...container, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 'clamp(28px, 5vw, 44px) clamp(16px, 4vw, 40px)' }}>
+        {event.workshopDescription && (
+          <>
+            <p style={{ ...eyebrow, marginBottom: '10px' }}>Behind the Decks · DJ workshops</p>
+            <p style={{ ...body, color: color.cream, fontSize: 'clamp(16px, 4vw, 19px)', maxWidth: '560px', marginBottom: '22px' }}>
+              {event.workshopDescription}
+            </p>
+          </>
+        )}
         <a href={event.workshopUrl} target="_blank" rel="noopener noreferrer" className="ml-btn"
           style={{ ...buttonPrimary, width: '100%', maxWidth: '460px', minHeight: '64px', fontSize: 'clamp(21px, 5.6vw, 26px)', padding: '0 28px', whiteSpace: 'normal', textAlign: 'center', lineHeight: 1.05 }}>
           {event.workshopLabel}<span aria-hidden="true">↗</span>

@@ -56,7 +56,7 @@ export default {
   workshops: {
     title: 'Behind the Decks',
     subtitle: 'DJ Workshop Sessions',
-    intro: 'Small, hands-on sessions with working DJs. Eight seats per workshop. Approval required.',
+    intro: "Each small-group session starts with the DJ's story and how they built their career. Watch and hear their style up close, then step behind the decks yourself. Eight seats per workshop. Approval required.",
     people: [
       { name: 'DJ Myle' },
       { name: 'DJ KB' },
