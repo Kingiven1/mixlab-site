@@ -24,7 +24,7 @@ export default function PartnerList({ compact = false }) {
                 <>
                   <div style={{ height: compact ? '64px' : '80px', display: 'flex', alignItems: 'center' }}><PartnerLogo p={p} /></div>
                   {!compact && p.logo && <p style={{ fontFamily: font.display, fontWeight: 700, fontSize: '22px', textTransform: 'uppercase', color: color.cream, margin: '14px 0 0', lineHeight: 1.05 }}>{p.name}</p>}
-                  {p.copy && <p style={{ ...body, fontSize: '15px', marginTop: compact ? '10px' : '6px' }}>{p.copy}</p>}
+                  {p.link && <p style={{ ...body, fontSize: '14px', fontWeight: 600, color: color.coral, marginTop: compact ? '10px' : '8px' }}>Visit website ↗</p>}
                 </>
               );
               return (

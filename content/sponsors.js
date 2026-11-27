@@ -25,20 +25,20 @@ export default {
     {
       label: 'Technology Partner',
       partners: [
-        { name: 'AlphaTheta', logo: '/img/partners/alphatheta-white.png', logoHeight: 76, copy: 'Technology partner for the hands-on DJ workshops.', link: null },
+        { name: 'AlphaTheta', logo: '/img/partners/alphatheta-white.png', logoHeight: 76, link: 'https://www.alphatheta.com' },
       ],
     },
     {
       label: 'Hospitality Partners',
       partners: [
-        { name: 'NOCA', logo: '/img/partners/noca.webp', logoHeight: 64, copy: 'Hospitality partner for The Mix Lab.', link: null },
-        { name: 'Leisure Hydration', logo: '/img/partners/leisure-hydration.png', logoHeight: 64, copy: 'Keeping guests hydrated through the day.', link: null },
+        { name: 'NOCA', logo: '/img/partners/noca.webp', logoHeight: 64, link: 'https://www.drinknoca.com' },
+        { name: 'Leisure Hydration', logo: '/img/partners/leisure-hydration.png', logoHeight: 64, link: 'https://leisureproject.co' },
       ],
     },
     {
       label: 'Supporting Partner',
       partners: [
-        { name: 'BPM Supreme', logo: '/img/partners/bpm-supreme.png', logoHeight: 30, copy: 'Complimentary BPM Supreme codes for Mix Lab guests.', link: null },
+        { name: 'BPM Supreme', logo: '/img/partners/bpm-supreme.png', logoHeight: 30, link: 'https://www.bpmsupreme.com' },
       ],
     },
   ],
