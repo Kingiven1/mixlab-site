@@ -4,7 +4,8 @@ import RegisterButton from '../components/RegisterButton';
 import UpdatesForm from '../components/UpdatesForm';
 import Flyer from '../components/Flyer';
 import PartnerList from '../components/PartnerList';
-import { SectionHead, TalentGrid, ScheduleList, ProvisionalNote, FAQList, TextLink } from '../components/Blocks';
+import Lineup from '../components/Lineup';
+import { SectionHead, ScheduleList, ProvisionalNote, FAQList, TextLink } from '../components/Blocks';
 import { event, sponsors, hasRegistration, asset } from '../lib/content';
 import { color, font, container, section, eyebrow, h1, h3, body, bodyLg, small, buttonGhost, buttonPrimary, radius, card } from '../styles/tokens';
 
@@ -71,9 +72,8 @@ export default function Experience() {
       {/* 5 ── LINEUP */}
       <section id="lineup" style={{ ...section, background: color.surface }}>
         <div style={container}>
-          <SectionHead kicker="The lineup" line1="Featured" line2="talent." />
-          <TalentGrid />
-          <p style={{ fontFamily: font.display, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em', fontSize: 'clamp(20px, 2.4vw, 26px)', color: color.coral, marginTop: '32px' }}>More talent announcements coming soon.</p>
+          <SectionHead kicker="The lineup" line1="Who you'll" line2="meet." />
+          <Lineup />
         </div>
       </section>
 
@@ -122,6 +122,9 @@ function WorkshopCTA() {
         </a>
         <p style={{ ...body, color: color.cream, fontSize: 'clamp(15px, 3.8vw, 17px)', maxWidth: '460px', marginTop: '14px' }}>
           {event.workshopNote}
+        </p>
+        <p style={{ ...small, color: color.creamSoft, maxWidth: '460px', marginTop: '6px' }}>
+          Workshop seats require a separate reservation from your general event RSVP.
         </p>
       </div>
     </section>

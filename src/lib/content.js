@@ -1,7 +1,7 @@
 import content from 'virtual:content';
 
 // Everything comes from /content — already filtered to published entries.
-export const { event, talent, schedule, partners, sponsors, faq, evolution, showingDrafts } = content;
+export const { event, talent, schedule, partners, sponsors, faq, evolution, participants, showingDrafts } = content;
 
 // Public paths like '/img/x.webp' → respects the build base (needed for previews).
 export const asset = (p) => (p && p.startsWith('/') ? `${import.meta.env.BASE_URL}${p.slice(1)}` : p);

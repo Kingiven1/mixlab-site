@@ -22,10 +22,10 @@ export default {
       summary: 'Complimentary beginner DJ workshops, gear demos, art, fireside chats, DJ sets and light bites.',
       sessions: [
         { status: 'published', title: 'Intro to DJ workshops', detail: 'Hands-on and beginner-friendly, with technology partner AlphaTheta. No previous DJ experience required.', area: null, time: null, talent: [] },
-        { status: 'published', title: 'Art activation', detail: 'A live art activation from A Fly Guy.', area: null, time: null, talent: ['A Fly Guy'] },
+        { status: 'published', title: 'Art activation', detail: 'A live art activation from DJ Fly Guy.', area: null, time: null, talent: ['DJ Fly Guy'] },
         { status: 'published', title: 'Fireside chat: Mental Health & Creative Wellbeing', detail: 'An honest conversation about sustaining a creative life.', area: null, time: null, talent: [], partnerCategory: 'health_wellness' },
         { status: 'published', title: 'Fireside chat: AI & Creative Technology', detail: 'New tools and where creativity goes next.', area: null, time: null, talent: [], partnerCategory: 'ai_tech_creative' },
-        { status: 'published', title: 'Fireside chat: Finance & Business Growth', detail: 'Building a business around your craft.', area: null, time: null, talent: [], partnerCategory: 'business_financial' },
+        { status: 'published', title: 'Fireside chat: Community, Culture & Business Growth', detail: 'Building a business around your craft.', area: null, time: null, talent: [], partnerCategory: 'business_financial' },
       ],
     },
     {

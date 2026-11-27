@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 import Logo from '../components/Logo';
 import RegisterButton from '../components/RegisterButton';
 import PartnerList from '../components/PartnerList';
-import { TalentGrid, ScheduleList, ProvisionalNote, FAQList } from '../components/Blocks';
+import Lineup from '../components/Lineup';
+import { ScheduleList, ProvisionalNote, FAQList } from '../components/Blocks';
 import { event, evolution } from '../lib/content';
 import { color, font, container, eyebrow, h2, body, small, buttonGhost, card } from '../styles/tokens';
 
@@ -11,7 +12,7 @@ import { color, font, container, eyebrow, h2, body, small, buttonGhost, card } f
 
 const TABS = [
   { id: 'schedule', label: 'Schedule' },
-  { id: 'talent', label: 'Talent' },
+  { id: 'talent', label: 'Lineup' },
   { id: 'partners', label: 'Partners' },
   { id: 'venue', label: 'Venue' },
   { id: 'links', label: 'Links' },
@@ -60,8 +61,8 @@ export default function Guide() {
         </section>
 
         <section id="talent" aria-labelledby="talent-h" style={block}>
-          <H id="talent">Talent</H>
-          <TalentGrid expandable />
+          <H id="talent">Lineup</H>
+          <Lineup />
         </section>
 
         <section id="partners" aria-labelledby="partners-h" style={block}>
