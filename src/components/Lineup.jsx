@@ -60,6 +60,23 @@ function GroupHead({ id, title, sub, intro }) {
   );
 }
 
+// Home page: performers only, with large photos (the original lineup look).
+export function PerformerGrid() {
+  const people = resolve(participants.performances.people);
+  return (
+    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 230px), 1fr))', gap: 'clamp(20px, 2.4vw, 28px)' }}>
+      {people.map(({ name, t }) => (
+        <li key={name}>
+          <img src={asset(t.photo)} alt={t.name} loading="lazy" style={{ width: '100%', aspectRatio: '4 / 5', objectFit: 'cover', objectPosition: t.photoPosition || 'center', borderRadius: radius.md, background: color.surface, display: 'block' }} />
+          <p style={{ ...small, color: color.coral, textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, marginTop: '14px' }}>{[t.role, t.city].filter(Boolean).join(' · ')}</p>
+          <h3 style={{ ...h3, marginTop: '6px' }}>{t.name}</h3>
+          <p style={{ ...body, fontSize: '15px', marginTop: '8px' }}>{t.bio}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export default function Lineup() {
   const { performances, conversations, workshops } = participants;
   const gap = { marginTop: 'clamp(56px, 9vw, 88px)' };

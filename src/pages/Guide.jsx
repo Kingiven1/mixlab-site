@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import Logo from '../components/Logo';
 import RegisterButton from '../components/RegisterButton';
 import PartnerList from '../components/PartnerList';
-import Lineup from '../components/Lineup';
 import { ScheduleList, ProvisionalNote, FAQList } from '../components/Blocks';
 import { event, evolution } from '../lib/content';
 import { color, font, container, eyebrow, h2, body, small, buttonGhost, card } from '../styles/tokens';
@@ -62,7 +61,7 @@ export default function Guide() {
 
         <section id="talent" aria-labelledby="talent-h" style={block}>
           <H id="talent">Lineup</H>
-          <Lineup />
+          <GuideLink href="/lineup" label="See the full lineup" sub="Performances, panels & conversations, and workshop DJs" />
         </section>
 
         <section id="partners" aria-labelledby="partners-h" style={block}>

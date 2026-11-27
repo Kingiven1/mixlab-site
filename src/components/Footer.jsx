@@ -21,6 +21,7 @@ export default function Footer() {
 
           <nav aria-label="Footer" style={{ display: 'flex', flexDirection: 'column' }}>
             <Link to="/" style={linkStyle}>Experience</Link>
+            <Link to="/lineup" style={linkStyle}>Lineup</Link>
             <Link to="/guide" style={linkStyle}>Digital Experience Guide</Link>
             <Link to="/partners" style={linkStyle}>Partners</Link>
             <a href={`mailto:${event.contactEmail}`} style={linkStyle}>{event.contactEmail}</a>

@@ -4,7 +4,7 @@ import RegisterButton from '../components/RegisterButton';
 import UpdatesForm from '../components/UpdatesForm';
 import Flyer from '../components/Flyer';
 import PartnerList from '../components/PartnerList';
-import Lineup from '../components/Lineup';
+import { PerformerGrid } from '../components/Lineup';
 import { SectionHead, ScheduleList, ProvisionalNote, FAQList, TextLink } from '../components/Blocks';
 import { event, sponsors, hasRegistration, asset } from '../lib/content';
 import { color, font, container, section, eyebrow, h1, h3, body, bodyLg, small, buttonGhost, buttonPrimary, radius, card } from '../styles/tokens';
@@ -72,8 +72,12 @@ export default function Experience() {
       {/* 5 ── LINEUP */}
       <section id="lineup" style={{ ...section, background: color.surface }}>
         <div style={container}>
-          <SectionHead kicker="The lineup" line1="Who you'll" line2="meet." />
-          <Lineup />
+          <SectionHead kicker="The lineup" line1="Performances" line2="& DJ sets." />
+          <PerformerGrid />
+          <div style={{ marginTop: '36px' }}>
+            <Link to="/lineup" className="ml-btn ml-ghost" style={buttonGhost}>See the full lineup →</Link>
+          </div>
+          <p style={{ ...body, marginTop: '12px', fontSize: '15px' }}>Panels, conversations and workshop DJs are on the lineup page.</p>
         </div>
       </section>
 

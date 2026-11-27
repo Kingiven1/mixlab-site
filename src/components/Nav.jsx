@@ -6,6 +6,7 @@ import { color, font, container } from '../styles/tokens';
 
 const LINKS = [
   { to: '/', label: 'Experience', end: true },
+  { to: '/lineup', label: 'Lineup' },
   { to: '/guide', label: 'Guide' },
   { to: '/partners', label: 'Partners' },
 ];

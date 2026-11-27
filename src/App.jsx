@@ -7,6 +7,7 @@ import DraftBanner from './components/DraftBanner';
 import Experience from './pages/Experience';
 import Partners from './pages/Partners';
 import Guide from './pages/Guide';
+import LineupPage from './pages/LineupPage';
 import Evolution from './pages/Evolution';
 import { evolution } from './lib/content';
 import NotFound from './pages/NotFound';
@@ -46,6 +47,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Experience />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/lineup" element={<LineupPage />} />
           <Route path="/guide" element={<Guide />} />
           <Route path={evolution.path} element={<Evolution />} />
           <Route path="*" element={PREVIEW_EVOLUTION ? <Evolution /> : <NotFound />} />
