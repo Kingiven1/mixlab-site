@@ -113,7 +113,11 @@ export default function Lineup() {
         <GroupHead id="workshop-djs" title={workshops.title} sub={workshops.subtitle} intro={workshops.intro} />
         <People list={workshops.people} />
         <div style={{ ...card, marginTop: '20px', padding: 'clamp(20px, 4vw, 28px)', display: 'grid', gap: '14px', justifyItems: 'start' }}>
-          <p style={{ ...body, color: color.cream, fontWeight: 600 }}>Workshop seats require a separate reservation from your general event RSVP.</p>
+          <p style={{ ...body, color: color.cream, fontWeight: 600 }}>Two steps, two approvals:</p>
+          <ol style={{ ...body, color: color.cream, fontSize: '15px', margin: 0, paddingLeft: '22px', display: 'grid', gap: '4px' }}>
+            <li><strong>RSVP for the event</strong> (Daytime or Night).</li>
+            <li><strong>Book your workshop DJ.</strong> Workshop seats require a separate reservation from your general event RSVP.</li>
+          </ol>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             {event.workshopUrl && (
               <a href={event.workshopUrl} target="_blank" rel="noopener noreferrer" className="ml-btn" style={buttonPrimary}>

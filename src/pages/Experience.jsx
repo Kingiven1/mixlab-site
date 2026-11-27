@@ -12,10 +12,10 @@ import { color, font, container, section, eyebrow, h1, h3, body, bodyLg, small, 
 // Planned activities — short and inviting. Treated as planned until confirmed.
 const EXPECT = [
   { label: 'Learn', title: 'Hands-on DJ workshops', copy: 'Beginner-friendly and complimentary. Get on the decks with working DJs — no experience needed.' },
-  { label: 'Discover', title: 'Fireside chats & panels', copy: 'Real talk on creative business, AI and creative technology, and building a career around your craft.' },
+  { label: 'Discover', title: 'Panels & conversations', copy: 'Real talk on creative business, AI and creative technology, and building a career around your craft.' },
   { label: 'Reflect', title: 'A mental health conversation', copy: 'An honest conversation about creative wellbeing and sustaining the work you love.' },
-  { label: 'Celebrate', title: 'DJ performances', copy: 'Live DJ sets through the afternoon and into the Social Hour Night Cap. Dancing encouraged.' },
-  { label: 'Connect', title: 'Social Hour Night Cap', copy: 'Meet the community over drinks, with a social equity conversation hosted by NFNTE Capital.' },
+  { label: 'Celebrate', title: 'DJ performances', copy: 'Live DJ sets through the afternoon and into Social Hour + The Night Session. Dancing encouraged.' },
+  { label: 'Connect', title: 'Social Hour + The Night Session', copy: 'Meet the community over drinks, with a social equity conversation hosted by NFNTE Capital.' },
 ];
 
 export default function Experience() {
@@ -53,7 +53,7 @@ export default function Experience() {
       {/* 4 ── WHAT TO EXPECT */}
       <section id="expect" style={section}>
         <div style={container}>
-          <SectionHead kicker="What to expect" line1="Noon to night cap." line2="Hands on." />
+          <SectionHead kicker="What to expect" line1="Noon to night." line2="Hands on." />
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, borderTop: `1px solid ${color.lineCoral}` }}>
             {EXPECT.map((x) => (
               <li key={x.title} className="ml-row" style={{ padding: '22px 0', borderBottom: `1px solid ${color.lineCoral}` }}>
@@ -135,9 +135,12 @@ function WorkshopCTA() {
         <p style={{ ...body, color: color.cream, fontSize: 'clamp(15px, 3.8vw, 17px)', maxWidth: '460px', marginTop: '14px' }}>
           {event.workshopNote}
         </p>
-        <p style={{ ...small, color: color.creamSoft, maxWidth: '460px', marginTop: '6px' }}>
-          Workshop seats require a separate reservation from your general event RSVP.
-        </p>
+        <div style={{ maxWidth: '460px', width: '100%' }}>
+        <ol style={{ ...body, color: color.cream, fontSize: '15px', textAlign: 'left', margin: '14px 0 0', paddingLeft: '22px', display: 'grid', gap: '4px' }}>
+            <li><strong>RSVP for the event</strong> (Daytime or Night).</li>
+            <li><strong>Book your workshop DJ.</strong> A separate request with its own approval.</li>
+          </ol>
+        </div>
       </div>
     </section>
   );
@@ -167,6 +170,9 @@ function Hero() {
             <RegisterButton />
             <Link to="/#expect" className="ml-btn ml-ghost" style={buttonGhost}>What to expect</Link>
           </div>
+          <p style={{ ...body, color: color.creamSoft, fontSize: '15px', marginTop: '14px', maxWidth: '520px' }}>
+            Two sessions: <strong style={{ color: color.cream }}>Daytime</strong> Noon–5 PM · <strong style={{ color: color.cream }}>Night</strong> 5–8 PM. Pick yours when you RSVP.
+          </p>
           <p style={{ ...small, letterSpacing: '0.1em', textTransform: 'uppercase', margin: 'clamp(40px, 6vw, 56px) 0 14px', color: color.creamSoft }}>Presented by</p>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'clamp(24px, 5vw, 44px)', flexWrap: 'wrap' }}>
             {sponsors.presenters.map((p) => (
@@ -207,7 +213,7 @@ function VenueBlock() {
       <dl style={{ margin: '24px 0 0', display: 'grid', gap: '14px' }}>
         <InfoRow k="Date" v={event.dateLabel} />
         <InfoRow k="Hours" v={event.hoursLabel || 'Final hours announced soon (Eastern Time)'} />
-        <InfoRow k="Admission" v="Complimentary. RSVP required: attendance is by invitation request, and every request is reviewed." />
+        <InfoRow k="Admission" v="Complimentary. RSVP required, and every RSVP is reviewed." />
         <InfoRow k="Arrival" v={v.arrival || 'Arrival and check-in details will be posted before the event.'} />
         {v.parking && <InfoRow k="Parking" v={v.parking} />}
         {v.transit && <InfoRow k="Transit" v={v.transit} />}
@@ -232,10 +238,10 @@ function RegisterSection() {
         <SectionHead
           center
           kicker="Attend"
-          line1={hasRegistration ? 'Request an' : 'Invitation requests'}
-          line2={hasRegistration ? 'invitation.' : 'open soon.'}
+          line1={hasRegistration ? 'RSVP' : 'Invitation requests'}
+          line2={hasRegistration ? 'to attend.' : 'open soon.'}
           intro={hasRegistration
-            ? 'Submitting a request does not confirm attendance. All requests are reviewed.'
+            ? 'Approval required. Submitting an RSVP does not confirm attendance.'
             : 'Attendance is by invitation request, and every request is reviewed. Get updates and we’ll email you when requests open.'}
         />
         <div style={{ maxWidth: '760px', margin: '0 auto' }}>
@@ -243,7 +249,7 @@ function RegisterSection() {
             <div style={{ textAlign: 'center' }}>
               <RegisterButton />
               <p style={{ ...body, marginTop: '18px', fontSize: '15px' }}>
-                Choose the Daytime or Night session when you request. Admission is complimentary.
+                Choose your session when you RSVP: Daytime (Noon–5 PM) for workshops, art and talks, or Night (5–8 PM) for Social Hour + The Night Session. Admission is complimentary. Want a workshop seat? Book it separately on the same page.
               </p>
             </div>
           ) : (

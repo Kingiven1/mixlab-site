@@ -18,7 +18,7 @@ export default [
   {
     status: 'published',
     q: 'How do I attend?',
-    a: 'Request an invitation through our Luma page and choose the Daytime or Night session. Every request is reviewed, and submitting one does not confirm attendance. You’ll get an email once your request is approved. No DJ experience needed.',
+    a: 'RSVP on our Luma page and choose the Daytime or Night session. Every RSVP is reviewed, and submitting one does not confirm attendance. Workshop seats are booked separately on the same page and need their own approval. You’ll get an email once your RSVP is approved. No DJ experience needed.',
   },
   {
     status: 'draft', // the updates form is hidden now that Luma is live
@@ -33,7 +33,7 @@ export default [
   {
     status: 'published',
     q: 'Is there a cost to attend?',
-    a: 'No. Admission is complimentary. RSVP is required: attendance is by invitation request, and every request is reviewed.',
+    a: 'No. Admission is complimentary. RSVP is required, and every RSVP is reviewed.',
   },
   { status: 'draft', q: 'Is there an age requirement?', a: 'TBC — confirm with the venue.' },
   { status: 'draft', q: 'Is the venue accessible?', a: 'TBC — confirm step-free access, restrooms and seating with the venue.' },
