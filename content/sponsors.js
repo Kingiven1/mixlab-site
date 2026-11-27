@@ -25,7 +25,7 @@ export default {
     {
       label: 'Technology Partner',
       partners: [
-        { name: 'AlphaTheta', logo: null, copy: 'Technology partner for the hands-on DJ workshops.', link: null },
+        { name: 'AlphaTheta', logo: '/img/partners/alphatheta-white.png', logoHeight: 76, copy: 'Technology partner for the hands-on DJ workshops.', link: null },
       ],
     },
     {
