@@ -33,6 +33,7 @@ export default {
       partners: [
         { name: 'NOCA', logo: '/img/partners/noca.webp', logoHeight: 64, link: 'https://www.drinknoca.com' },
         { name: 'Leisure Hydration', logo: '/img/partners/leisure-hydration.png', logoHeight: 64, link: 'https://leisureproject.co' },
+        { name: 'Sensori', logo: '/img/partners/sensori.png', logoHeight: 30, link: null },
       ],
     },
     {
